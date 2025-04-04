@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {}
+    "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {}
   },
   "projects": {
-    "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
+    "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+        "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
         "projectName": "ITIGraduationProject.DAL",
-        "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+        "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
         "packagesPath": "C:\\Users\\Al Badr\\.nuget\\packages\\",
-        "outputPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\ITIGraduationProject.DAL\\obj\\",
+        "outputPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

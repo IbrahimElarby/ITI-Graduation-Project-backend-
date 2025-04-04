@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ITIGraduationProject.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class intialcreate : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -34,6 +34,8 @@ namespace ITIGraduationProject.DAL.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()"),
                     LastLogin = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ProfileImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Bio = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -52,6 +54,19 @@ namespace ITIGraduationProject.DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Categories",
+                columns: table => new
+                {
+                    CategoryID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categories", x => x.CategoryID);
                 });
 
             migrationBuilder.CreateTable(
@@ -193,6 +208,29 @@ namespace ITIGraduationProject.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BlogPosts",
+                columns: table => new
+                {
+                    BlogPostID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FeaturedImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    AuthorID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BlogPosts", x => x.BlogPostID);
+                    table.ForeignKey(
+                        name: "FK_BlogPosts_AspNetUsers_AuthorID",
+                        column: x => x.AuthorID,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Orders",
                 columns: table => new
                 {
@@ -221,6 +259,8 @@ namespace ITIGraduationProject.DAL.Migrations
                     RecipeID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Instructions = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PrepTime = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: true),
                     CookingTime = table.Column<int>(type: "int", nullable: false),
                     CuisineType = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -310,6 +350,30 @@ namespace ITIGraduationProject.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BlogPostCategories",
+                columns: table => new
+                {
+                    BlogPostID = table.Column<int>(type: "int", nullable: false),
+                    CategoryID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BlogPostCategories", x => new { x.BlogPostID, x.CategoryID });
+                    table.ForeignKey(
+                        name: "FK_BlogPostCategories_BlogPosts_BlogPostID",
+                        column: x => x.BlogPostID,
+                        principalTable: "BlogPosts",
+                        principalColumn: "BlogPostID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BlogPostCategories_Categories_CategoryID",
+                        column: x => x.CategoryID,
+                        principalTable: "Categories",
+                        principalColumn: "CategoryID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "OrderItems",
                 columns: table => new
                 {
@@ -337,6 +401,39 @@ namespace ITIGraduationProject.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    CommentID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Text = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    RecipeID = table.Column<int>(type: "int", nullable: true),
+                    BlogPostID = table.Column<int>(type: "int", nullable: true),
+                    UserID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.CommentID);
+                    table.ForeignKey(
+                        name: "FK_Comments_AspNetUsers_UserID",
+                        column: x => x.UserID,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Comments_BlogPosts_BlogPostID",
+                        column: x => x.BlogPostID,
+                        principalTable: "BlogPosts",
+                        principalColumn: "BlogPostID");
+                    table.ForeignKey(
+                        name: "FK_Comments_Recipes_RecipeID",
+                        column: x => x.RecipeID,
+                        principalTable: "Recipes",
+                        principalColumn: "RecipeID");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Ratings",
                 columns: table => new
                 {
@@ -358,6 +455,30 @@ namespace ITIGraduationProject.DAL.Migrations
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ratings_Recipes_RecipeID",
+                        column: x => x.RecipeID,
+                        principalTable: "Recipes",
+                        principalColumn: "RecipeID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RecipeCategories",
+                columns: table => new
+                {
+                    RecipeID = table.Column<int>(type: "int", nullable: false),
+                    CategoryID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RecipeCategories", x => new { x.RecipeID, x.CategoryID });
+                    table.ForeignKey(
+                        name: "FK_RecipeCategories_Categories_CategoryID",
+                        column: x => x.CategoryID,
+                        principalTable: "Categories",
+                        principalColumn: "CategoryID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_RecipeCategories_Recipes_RecipeID",
                         column: x => x.RecipeID,
                         principalTable: "Recipes",
                         principalColumn: "RecipeID",
@@ -437,6 +558,31 @@ namespace ITIGraduationProject.DAL.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BlogPostCategories_CategoryID",
+                table: "BlogPostCategories",
+                column: "CategoryID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BlogPosts_AuthorID",
+                table: "BlogPosts",
+                column: "AuthorID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_BlogPostID",
+                table: "Comments",
+                column: "BlogPostID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_RecipeID",
+                table: "Comments",
+                column: "RecipeID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_UserID",
+                table: "Comments",
+                column: "UserID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_MealSuggestions_RestaurantID",
                 table: "MealSuggestions",
                 column: "RestaurantID");
@@ -470,6 +616,11 @@ namespace ITIGraduationProject.DAL.Migrations
                 name: "IX_Ratings_UserID",
                 table: "Ratings",
                 column: "UserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RecipeCategories_CategoryID",
+                table: "RecipeCategories",
+                column: "CategoryID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RecipeIngredients_IngredientID",
@@ -511,6 +662,12 @@ namespace ITIGraduationProject.DAL.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "BlogPostCategories");
+
+            migrationBuilder.DropTable(
+                name: "Comments");
+
+            migrationBuilder.DropTable(
                 name: "MealSuggestions");
 
             migrationBuilder.DropTable(
@@ -518,6 +675,9 @@ namespace ITIGraduationProject.DAL.Migrations
 
             migrationBuilder.DropTable(
                 name: "Ratings");
+
+            migrationBuilder.DropTable(
+                name: "RecipeCategories");
 
             migrationBuilder.DropTable(
                 name: "RecipeIngredients");
@@ -532,7 +692,13 @@ namespace ITIGraduationProject.DAL.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
+                name: "BlogPosts");
+
+            migrationBuilder.DropTable(
                 name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
 
             migrationBuilder.DropTable(
                 name: "Ingredients");

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITIGraduationProject.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250402152911_intialcreate")]
-    partial class intialcreate
+    [Migration("20250404184245_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,6 +35,9 @@ namespace ITIGraduationProject.DAL.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -78,6 +81,9 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ProfileImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -103,6 +109,105 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.BlogPost", b =>
+                {
+                    b.Property<int>("BlogPostID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BlogPostID"));
+
+                    b.Property<int>("AuthorID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FeaturedImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BlogPostID");
+
+                    b.HasIndex("AuthorID");
+
+                    b.ToTable("BlogPosts");
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.BlogPostCategory", b =>
+                {
+                    b.Property<int>("BlogPostID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.HasKey("BlogPostID", "CategoryID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("BlogPostCategories");
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.Category", b =>
+                {
+                    b.Property<int>("CategoryID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryID"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CategoryID");
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.Comment", b =>
+                {
+                    b.Property<int>("CommentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"));
+
+                    b.Property<int?>("BlogPostID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("RecipeID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("CommentID");
+
+                    b.HasIndex("BlogPostID");
+
+                    b.HasIndex("RecipeID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.Ingredient", b =>
@@ -273,6 +378,12 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasMaxLength(2000)
                         .HasColumnType("nvarchar(2000)");
 
+                    b.Property<string>("Instructions")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PrepTime")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -283,6 +394,21 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasIndex("CreatedBy");
 
                     b.ToTable("Recipes");
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.RecipeCategory", b =>
+                {
+                    b.Property<int>("RecipeID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.HasKey("RecipeID", "CategoryID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("RecipeCategories");
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.RecipeIngredient", b =>
@@ -525,6 +651,59 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ITIGraduationProject.DAL.BlogPost", b =>
+                {
+                    b.HasOne("ITIGraduationProject.DAL.ApplicationUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.BlogPostCategory", b =>
+                {
+                    b.HasOne("ITIGraduationProject.DAL.BlogPost", "BlogPost")
+                        .WithMany("Categories")
+                        .HasForeignKey("BlogPostID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ITIGraduationProject.DAL.Category", "Category")
+                        .WithMany("BlogPosts")
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BlogPost");
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.Comment", b =>
+                {
+                    b.HasOne("ITIGraduationProject.DAL.BlogPost", "BlogPost")
+                        .WithMany("Comments")
+                        .HasForeignKey("BlogPostID");
+
+                    b.HasOne("ITIGraduationProject.DAL.Recipe", "Recipe")
+                        .WithMany("Comments")
+                        .HasForeignKey("RecipeID");
+
+                    b.HasOne("ITIGraduationProject.DAL.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BlogPost");
+
+                    b.Navigation("Recipe");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ITIGraduationProject.DAL.MealSuggestion", b =>
                 {
                     b.HasOne("ITIGraduationProject.DAL.Restaurant", "Restaurant")
@@ -602,6 +781,25 @@ namespace ITIGraduationProject.DAL.Migrations
                         .IsRequired();
 
                     b.Navigation("Creator");
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.RecipeCategory", b =>
+                {
+                    b.HasOne("ITIGraduationProject.DAL.Category", "Category")
+                        .WithMany("Recipes")
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ITIGraduationProject.DAL.Recipe", "Recipe")
+                        .WithMany("Categories")
+                        .HasForeignKey("RecipeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Recipe");
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.RecipeIngredient", b =>
@@ -709,6 +907,20 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.Navigation("Subscriptions");
                 });
 
+            modelBuilder.Entity("ITIGraduationProject.DAL.BlogPost", b =>
+                {
+                    b.Navigation("Categories");
+
+                    b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("ITIGraduationProject.DAL.Category", b =>
+                {
+                    b.Navigation("BlogPosts");
+
+                    b.Navigation("Recipes");
+                });
+
             modelBuilder.Entity("ITIGraduationProject.DAL.Ingredient", b =>
                 {
                     b.Navigation("OrderItems");
@@ -723,6 +935,10 @@ namespace ITIGraduationProject.DAL.Migrations
 
             modelBuilder.Entity("ITIGraduationProject.DAL.Recipe", b =>
                 {
+                    b.Navigation("Categories");
+
+                    b.Navigation("Comments");
+
                     b.Navigation("Ratings");
 
                     b.Navigation("RecipeIngredients");

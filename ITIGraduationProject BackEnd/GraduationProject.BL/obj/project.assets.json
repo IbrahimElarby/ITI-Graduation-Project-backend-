@@ -3006,11 +3006,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
+      "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
       "projectName": "ITIGraduationProject.BL",
-      "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
+      "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
       "packagesPath": "C:\\Users\\Al Badr\\.nuget\\packages\\",
-      "outputPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\GraduationProject.BL\\obj\\",
+      "outputPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\GraduationProject.BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3032,8 +3032,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
-              "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj"
+            "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
+              "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj"
             }
           }
         }
