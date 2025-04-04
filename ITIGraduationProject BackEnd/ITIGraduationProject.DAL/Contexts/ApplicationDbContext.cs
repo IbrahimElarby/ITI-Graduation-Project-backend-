@@ -25,6 +25,11 @@ namespace ITIGraduationProject.DAL
         public DbSet<RestaurantMeal> RestaurantMeals { get; set; }
         public DbSet<MealSuggestion> MealSuggestions { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<BlogPost> BlogPosts { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<RecipeCategory> RecipeCategories { get; set; }
+        public DbSet<BlogPostCategory> BlogPostCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

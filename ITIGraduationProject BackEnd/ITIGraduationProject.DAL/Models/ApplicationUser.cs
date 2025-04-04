@@ -13,6 +13,9 @@ namespace ITIGraduationProject.DAL
         public DateTime CreatedAt { get; set; }
         public DateTime? LastLogin { get; set; }
 
+        public string? ProfileImageUrl { get; set; } 
+        public string? Bio { get; set; } 
+
         // Navigation properties
         public ICollection<Recipe>? Recipes { get; set; }
         public ICollection<Rating>? Ratings { get; set; }

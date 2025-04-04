@@ -15,7 +15,7 @@ namespace ITIGraduationProject.DAL
         public decimal Carbs { get; set; }
         public decimal Fats { get; set; }
 
-        public ICollection<RecipeIngredient> RecipeIngredients { get; set; }
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public ICollection<RecipeIngredient>? RecipeIngredients { get; set; }
+        public ICollection<OrderItem>? OrderItems { get; set; }
     }
 }
