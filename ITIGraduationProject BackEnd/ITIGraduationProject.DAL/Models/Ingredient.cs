@@ -9,7 +9,7 @@ namespace ITIGraduationProject.DAL
     public class Ingredient
     {
         public int IngredientID { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public decimal CaloriesPer100g { get; set; }
         public decimal Protein { get; set; }
         public decimal Carbs { get; set; }
