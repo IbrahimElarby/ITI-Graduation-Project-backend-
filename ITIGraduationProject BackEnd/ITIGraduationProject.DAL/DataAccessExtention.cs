@@ -15,7 +15,8 @@ namespace ITIGraduationProject.DAL
         {
             var connectionString = configuration.GetConnectionString("default");
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
-
+            services.AddScoped<IPostBlogRepository, PostBlogRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
           
         }
     }

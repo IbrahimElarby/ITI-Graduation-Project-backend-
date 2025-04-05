@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Migrations\\20250404184245_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ITIGraduationProject.DAL\\Migrations\\20250404184245_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|f:\\iti 4 month\\graduation project\\itigraduationproject backend\\itigraduationproject.dal\\migrations\\20250404184245_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\migrations\\20250404184245_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|f:\\iti 4 month\\graduation project\\itigraduationproject backend\\itigraduationproject.dal\\entities configration\\blogpostcategoryconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -168,7 +168,7 @@
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Migrations\\20250404184245_InitialCreate.cs",
               "ToolTip": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Migrations\\20250404184245_InitialCreate.cs",
               "RelativeToolTip": "ITIGraduationProject.DAL\\Migrations\\20250404184245_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T18:42:45.833Z",
               "EditorCaption": ""
@@ -183,8 +183,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Entities Configration\\BlogPostCategoryConfigration.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAwwA4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T18:30:42.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T18:30:42.84Z"
             },
             {
               "$type": "Document",
@@ -196,8 +195,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Entities Configration\\RecipeCategoryConfigraton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T18:23:02.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T18:23:02.396Z"
             },
             {
               "$type": "Document",
@@ -209,8 +207,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Entities Configration\\RecipeIngredientConfiguration.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:32:05.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T14:32:05.404Z"
             },
             {
               "$type": "Document",
@@ -222,8 +219,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Entities Configration\\ApplicationUserConfigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:28:13.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T13:28:13.888Z"
             },
             {
               "$type": "Document",
@@ -235,8 +231,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Contexts\\ApplicationDbContext.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAAB8AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:00:05.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T13:00:05.604Z"
             },
             {
               "$type": "Document",
@@ -248,8 +243,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\BlogPostCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:30:04.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T17:30:04.153Z"
             },
             {
               "$type": "Document",
@@ -261,8 +255,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\RecipeCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:28:27.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T17:28:27.293Z"
             },
             {
               "$type": "Document",
@@ -274,8 +267,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:26:57.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T17:26:57.62Z"
             },
             {
               "$type": "Document",
@@ -287,8 +279,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Comment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:26:09.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T17:26:09.393Z"
             },
             {
               "$type": "Document",
@@ -300,8 +291,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\BlogPost.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:24:44.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T17:24:44.09Z"
             },
             {
               "$type": "Document",
@@ -313,8 +303,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:57:37.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T11:57:37.51Z"
             },
             {
               "$type": "Document",
@@ -326,8 +315,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Recipe.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAgwBoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:01:54.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:01:54.879Z"
             },
             {
               "$type": "Document",
@@ -339,8 +327,7 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Ingredient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:09:10.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:09:10.723Z"
             },
             {
               "$type": "Document",
@@ -353,10 +340,6 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAQwA4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T14:48:46.299Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
@@ -585,6 +568,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T12:38:05.121Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             }
           ]
         }
