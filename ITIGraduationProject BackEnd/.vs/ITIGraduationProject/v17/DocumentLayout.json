@@ -3,28 +3,56 @@
   "WorkspaceRootPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\repository\\generic\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\repository\\generic\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\manger\\recipemanger\\recipemanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\manger\\recipemanger\\recipemanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\recipemanger\\recipedetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\dto\\recipemanger\\recipedetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\recipemanger\\ratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\dto\\recipemanger\\ratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\recipemanger\\recipeingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\dto\\recipemanger\\recipeingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\blogpostmanger\\authornesteddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\dto\\blogpostmanger\\authornesteddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\manger\\recipemanger\\irecipemanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\manger\\recipemanger\\irecipemanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\common\\generalresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\dto\\common\\generalresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\itigraduationproject.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\itigraduationproject.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\manger\\blogpostmanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,20 +71,12 @@
       "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\recipemanger\\recipeingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\dto\\recipemanger\\recipeingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\recipeingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\recipeingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\recipemanger\\ratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\dto\\recipemanger\\ratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\blogpostmanger\\commentnesteddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\dto\\common\\generalresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\dto\\common\\generalresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -85,10 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\graduationproject.bl\\bussinessextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33464491-454E-4376-9B31-FE9C726B02D4}|GraduationProject.BL\\ITIGraduationProject.BL.csproj|solutionrelative:graduationproject.bl\\bussinessextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\repository\\generic\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\repository\\generic\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\repository\\recipe\\ireciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,10 +117,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\repository\\postblog\\postblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\repository\\postblog\\postblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\repository\\generic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -141,10 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\mealsuggestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\mealsuggestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|solutionrelative:itigraduationproject.dal\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77F80716-4BBE-4B49-B716-3B4E7E589E5D}|ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj|d:\\iti\\project\\iti-graduation-project-backend-\\itigraduationproject backend\\itigraduationproject.dal\\migrations\\20250404184245_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -214,11 +218,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "BlogPostManger.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\BlogPostManger.cs",
               "RelativeDocumentMoniker": "GraduationProject.BL\\Manger\\BlogPostManger.cs",
@@ -227,133 +231,76 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T22:23:30.517Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RecipeDetailsDTO.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RecipeDetailsDTO.cs",
-              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\RecipeManger\\RecipeDetailsDTO.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RecipeDetailsDTO.cs",
-              "RelativeToolTip": "GraduationProject.BL\\DTO\\RecipeManger\\RecipeDetailsDTO.cs",
-              "ViewState": "AgIAABIAAAAAMTMzMzMowBkAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T03:40:20.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthorNestedDTO.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\BlogPostManger\\AuthorNestedDTO.cs",
-              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\BlogPostManger\\AuthorNestedDTO.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\BlogPostManger\\AuthorNestedDTO.cs",
-              "RelativeToolTip": "GraduationProject.BL\\DTO\\BlogPostManger\\AuthorNestedDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T22:47:16.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RecipeManger.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\RecipeManger\\RecipeManger.cs",
               "RelativeDocumentMoniker": "GraduationProject.BL\\Manger\\RecipeManger\\RecipeManger.cs",
               "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\RecipeManger\\RecipeManger.cs",
               "RelativeToolTip": "GraduationProject.BL\\Manger\\RecipeManger\\RecipeManger.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAmwCIAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAyMzMzEwRwHYAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T03:53:44.482Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Recipe.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Recipe.cs",
-              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Recipe.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Recipe.cs",
-              "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Recipe.cs",
-              "ViewState": "AgIAAAwAAAAAHjMzMzPjvwgAAAARAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Comment.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Comment.cs",
+              "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Comment.cs",
+              "ViewState": "AgIAAA0AAADAYmZmZmYSwBYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:01:54.879Z",
+              "WhenOpened": "2025-04-04T17:26:09.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Generic\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Repository\\Generic\\IGenericRepository.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Generic\\IGenericRepository.cs",
+              "RelativeToolTip": "ITIGraduationProject.DAL\\Repository\\Generic\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T19:51:58.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Generic\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Repository\\Generic\\GenericRepository.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Generic\\GenericRepository.cs",
+              "RelativeToolTip": "ITIGraduationProject.DAL\\Repository\\Generic\\GenericRepository.cs",
+              "ViewState": "AgIAAAEAAAAAk5mZmZkewAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T19:50:49.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAcAAACg+/////8VwAoAAAARAAAAAAAAAA==",
+              "Title": "RecipeDetailsDTO.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RecipeDetailsDTO.cs",
+              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\RecipeManger\\RecipeDetailsDTO.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RecipeDetailsDTO.cs",
+              "RelativeToolTip": "GraduationProject.BL\\DTO\\RecipeManger\\RecipeDetailsDTO.cs",
+              "ViewState": "AgIAABAAAADAx8zMzMwpwBgAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:57:37.51Z",
+              "WhenOpened": "2025-04-06T03:40:20.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IRecipeManger.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\RecipeManger\\IRecipeManger.cs",
-              "RelativeDocumentMoniker": "GraduationProject.BL\\Manger\\RecipeManger\\IRecipeManger.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\RecipeManger\\IRecipeManger.cs",
-              "RelativeToolTip": "GraduationProject.BL\\Manger\\RecipeManger\\IRecipeManger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T03:53:30.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IBlogPostManger.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\IBlogPostManger.cs",
-              "RelativeDocumentMoniker": "GraduationProject.BL\\Manger\\IBlogPostManger.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\IBlogPostManger.cs",
-              "RelativeToolTip": "GraduationProject.BL\\Manger\\IBlogPostManger.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswAYAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T22:59:39.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IngredientNameDTO.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\IngredientNameDTO.cs",
-              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\RecipeManger\\IngredientNameDTO.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\IngredientNameDTO.cs",
-              "RelativeToolTip": "GraduationProject.BL\\DTO\\RecipeManger\\IngredientNameDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T03:52:06.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RecipeIngredientDTO.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RecipeIngredientDTO.cs",
-              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\RecipeManger\\RecipeIngredientDTO.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RecipeIngredientDTO.cs",
-              "RelativeToolTip": "GraduationProject.BL\\DTO\\RecipeManger\\RecipeIngredientDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T03:50:08.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "RatingDTO.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RatingDTO.cs",
               "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\RecipeManger\\RatingDTO.cs",
@@ -366,7 +313,120 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RecipeIngredientDTO.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RecipeIngredientDTO.cs",
+              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\RecipeManger\\RecipeIngredientDTO.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\RecipeIngredientDTO.cs",
+              "RelativeToolTip": "GraduationProject.BL\\DTO\\RecipeManger\\RecipeIngredientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T03:50:08.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthorNestedDTO.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\BlogPostManger\\AuthorNestedDTO.cs",
+              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\BlogPostManger\\AuthorNestedDTO.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\BlogPostManger\\AuthorNestedDTO.cs",
+              "RelativeToolTip": "GraduationProject.BL\\DTO\\BlogPostManger\\AuthorNestedDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T22:47:16.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRecipeManger.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\RecipeManger\\IRecipeManger.cs",
+              "RelativeDocumentMoniker": "GraduationProject.BL\\Manger\\RecipeManger\\IRecipeManger.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\RecipeManger\\IRecipeManger.cs",
+              "RelativeToolTip": "GraduationProject.BL\\Manger\\RecipeManger\\IRecipeManger.cs",
+              "ViewState": "AgIAAAkAAACAMjMzMzMrwAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T03:53:30.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GeneralResult.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\Common\\GeneralResult.cs",
+              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\Common\\GeneralResult.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\Common\\GeneralResult.cs",
+              "RelativeToolTip": "GraduationProject.BL\\DTO\\Common\\GeneralResult.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAACFPQsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T22:34:37.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ITIGraduationProject.DAL",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+              "RelativeToolTip": "ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-06T22:47:41.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Recipe.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Recipe.cs",
+              "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Recipe.cs",
+              "ViewState": "AgIAAAwAAAAAHjMzMzPjvwgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T12:01:54.879Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAcAAACg+/////8VwAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T11:57:37.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IBlogPostManger.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\IBlogPostManger.cs",
+              "RelativeDocumentMoniker": "GraduationProject.BL\\Manger\\IBlogPostManger.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\Manger\\IBlogPostManger.cs",
+              "RelativeToolTip": "GraduationProject.BL\\Manger\\IBlogPostManger.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswAYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T22:59:39.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IngredientNameDTO.cs",
+              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\IngredientNameDTO.cs",
+              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\RecipeManger\\IngredientNameDTO.cs",
+              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\RecipeManger\\IngredientNameDTO.cs",
+              "RelativeToolTip": "GraduationProject.BL\\DTO\\RecipeManger\\IngredientNameDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T03:52:06.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Rating.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Rating.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Rating.cs",
@@ -374,12 +434,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Rating.cs",
               "ViewState": "AgIAAAYAAADAZWZmZmYkwA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:44:02.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:44:02.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "Ingredient.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Ingredient.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Ingredient.cs",
@@ -387,12 +446,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Ingredient.cs",
               "ViewState": "AgIAAAYAAACg/f////8TwAsAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:09:10.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:09:10.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "CommentNestedDTO.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\BlogPostManger\\CommentNestedDTO.cs",
               "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\BlogPostManger\\CommentNestedDTO.cs",
@@ -400,12 +458,11 @@
               "RelativeToolTip": "GraduationProject.BL\\DTO\\BlogPostManger\\CommentNestedDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T22:56:12.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T22:56:12.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "RecipeIngredient.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\RecipeIngredient.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\RecipeIngredient.cs",
@@ -413,12 +470,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\RecipeIngredient.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAswA4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:16:42.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:16:42.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "BlogPostDetailsDTO.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\BlogPostManger\\BlogPostDetailsDTO.cs",
               "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\BlogPostManger\\BlogPostDetailsDTO.cs",
@@ -426,12 +482,11 @@
               "RelativeToolTip": "GraduationProject.BL\\DTO\\BlogPostManger\\BlogPostDetailsDTO.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAkwAwAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T22:46:08.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T22:46:08.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "BlogPost.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\BlogPost.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\BlogPost.cs",
@@ -439,25 +494,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\BlogPost.cs",
               "ViewState": "AgIAAAgAAAAY//////81wAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:24:44.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T17:24:44.09Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GeneralResult.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\Common\\GeneralResult.cs",
-              "RelativeDocumentMoniker": "GraduationProject.BL\\DTO\\Common\\GeneralResult.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\DTO\\Common\\GeneralResult.cs",
-              "RelativeToolTip": "GraduationProject.BL\\DTO\\Common\\GeneralResult.cs",
-              "ViewState": "AgIAAAAAAACAMDMzMzMbwAYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T22:34:37.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\UnitOfWorks\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\UnitOfWorks\\UnitOfWork.cs",
@@ -465,12 +506,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\UnitOfWorks\\UnitOfWork.cs",
               "ViewState": "AgIAAAoAAAAiMjMzMzM7wBEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T20:02:04.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T20:02:04.824Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\UnitOfWorks\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\UnitOfWorks\\IUnitOfWork.cs",
@@ -478,12 +518,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\UnitOfWorks\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T20:01:27.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T20:01:27.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "BussinessExtentions.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\BussinessExtentions.cs",
               "RelativeDocumentMoniker": "GraduationProject.BL\\BussinessExtentions.cs",
@@ -491,25 +530,11 @@
               "RelativeToolTip": "GraduationProject.BL\\BussinessExtentions.cs",
               "ViewState": "AgIAAAQAAAAAMjMzMzMLwAkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T22:18:09.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T22:18:09.072Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Generic\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Repository\\Generic\\IGenericRepository.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Generic\\IGenericRepository.cs",
-              "RelativeToolTip": "ITIGraduationProject.DAL\\Repository\\Generic\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T19:51:58.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "IRecipeRepository.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Recipe\\IRecipeRepository.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Repository\\Recipe\\IRecipeRepository.cs",
@@ -517,12 +542,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Repository\\Recipe\\IRecipeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T02:58:04.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T02:58:04.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "DataAccessExtention.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\DataAccessExtention.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\DataAccessExtention.cs",
@@ -530,12 +554,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\DataAccessExtention.cs",
               "ViewState": "AgIAAAYAAACALzMzMzMLwBQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T14:54:42.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T14:54:42.06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "RecipeRepository.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Recipe\\RecipeRepository.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Repository\\Recipe\\RecipeRepository.cs",
@@ -543,12 +566,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Repository\\Recipe\\RecipeRepository.cs",
               "ViewState": "AgIAABAAAAAAxszMzMwMwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T03:04:51.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T03:04:51.697Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "PostBlogRepository.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\PostBlog\\PostBlogRepository.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Repository\\PostBlog\\PostBlogRepository.cs",
@@ -556,25 +578,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Repository\\PostBlog\\PostBlogRepository.cs",
               "ViewState": "AgIAABIAAACgyczMzMw7wBgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T19:58:04.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T19:58:04.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Generic\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Repository\\Generic\\GenericRepository.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\Generic\\GenericRepository.cs",
-              "RelativeToolTip": "ITIGraduationProject.DAL\\Repository\\Generic\\GenericRepository.cs",
-              "ViewState": "AgIAAA8AAACglZmZmZkdwAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T19:50:49.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Category.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Category.cs",
@@ -582,12 +590,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Category.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAABUPQgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:26:57.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T17:26:57.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "RecipeCategory.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\RecipeCategory.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\RecipeCategory.cs",
@@ -595,12 +602,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\RecipeCategory.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAABYPQ0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:28:27.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T17:28:27.293Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "IPostBlogRepository.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Repository\\PostBlog\\IPostBlogRepository.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Repository\\PostBlog\\IPostBlogRepository.cs",
@@ -608,12 +614,11 @@
               "RelativeToolTip": "ITIGraduationProject.DAL\\Repository\\PostBlog\\IPostBlogRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T19:59:00.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T19:59:00.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "RestaurantMeal.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\RestaurantMeal.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\RestaurantMeal.cs",
@@ -625,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "BlogPostCategory.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\BlogPostCategory.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\BlogPostCategory.cs",
@@ -637,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\OrderItem.cs",
@@ -649,7 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Order.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Order.cs",
@@ -661,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "MealSuggestion.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\MealSuggestion.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\MealSuggestion.cs",
@@ -673,19 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Comment.cs",
-              "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Comment.cs",
-              "ToolTip": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Comment.cs",
-              "RelativeToolTip": "ITIGraduationProject.DAL\\Models\\Comment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T17:26:09.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "20250404184245_InitialCreate.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Migrations\\20250404184245_InitialCreate.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Migrations\\20250404184245_InitialCreate.cs",
@@ -697,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "RecipeCategoryConfigraton.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\RecipeCategoryConfigraton.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\RecipeCategoryConfigraton.cs",
@@ -709,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "RecipeIngredientConfiguration.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\RecipeIngredientConfiguration.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\RecipeIngredientConfiguration.cs",
@@ -721,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "MealSuggestionConfiguration.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\MealSuggestionConfiguration.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\MealSuggestionConfiguration.cs",
@@ -733,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "RestaurantMealConfiguration.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\RestaurantMealConfiguration.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\RestaurantMealConfiguration.cs",
@@ -745,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\Program.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject\\Program.cs",
@@ -757,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\appsettings.json",
               "RelativeDocumentMoniker": "ITIGraduationProject\\appsettings.json",
@@ -769,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "RestaurantConfiguration.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\RestaurantConfiguration.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\RestaurantConfiguration.cs",
@@ -781,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "SubscriptionConfiguration.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\SubscriptionConfiguration.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\SubscriptionConfiguration.cs",
@@ -793,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "RatingConfiguration.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\RatingConfiguration.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\RatingConfiguration.cs",
@@ -805,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "OrderItemConfiguration .cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\OrderItemConfiguration .cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\OrderItemConfiguration .cs",
@@ -817,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "OrderConfiguration.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\OrderConfiguration.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\OrderConfiguration.cs",
@@ -829,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "IngredientConfiguration.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Entities Configration\\IngredientConfiguration.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Entities Configration\\IngredientConfiguration.cs",
@@ -841,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "Subscription.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Subscription.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Subscription.cs",
@@ -853,7 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "Restaurant.cs",
               "DocumentMoniker": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\Models\\Restaurant.cs",
               "RelativeDocumentMoniker": "ITIGraduationProject.DAL\\Models\\Restaurant.cs",

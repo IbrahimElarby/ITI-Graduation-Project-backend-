@@ -10,7 +10,6 @@ namespace ITIGraduationProject.BL.DTO.RecipeManger
 {
     public class RecipeDetailsDTO
     {
-
         public int RecipeID { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Instructions { get; set; } = string.Empty;

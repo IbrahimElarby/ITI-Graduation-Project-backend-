@@ -29,3 +29,19 @@ F:\iti 4 month\Graduation project\ITIGraduationProject BackEnd\GraduationProject
 F:\iti 4 month\Graduation project\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\refint\ITIGraduationProject.BL.dll
 F:\iti 4 month\Graduation project\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.pdb
 F:\iti 4 month\Graduation project\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ref\ITIGraduationProject.BL.dll
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\bin\Debug\net8.0\ITIGraduationProject.BL.deps.json
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\bin\Debug\net8.0\ITIGraduationProject.BL.dll
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\bin\Debug\net8.0\ITIGraduationProject.BL.pdb
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\bin\Debug\net8.0\ITIGraduationProject.DAL.dll
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\bin\Debug\net8.0\ITIGraduationProject.DAL.pdb
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.csproj.AssemblyReference.cache
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.AssemblyInfoInputs.cache
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.AssemblyInfo.cs
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.csproj.CoreCompileInputs.cache
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.sourcelink.json
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGradu.52DFEC42.Up2Date
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.dll
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\refint\ITIGraduationProject.BL.dll
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ITIGraduationProject.BL.pdb
+D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\GraduationProject.BL\obj\Debug\net8.0\ref\ITIGraduationProject.BL.dll
