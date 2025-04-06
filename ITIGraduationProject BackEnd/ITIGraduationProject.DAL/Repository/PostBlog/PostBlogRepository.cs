@@ -16,6 +16,17 @@ namespace ITIGraduationProject.DAL
             cookingContext = _cookingContext;
         }
 
+        public override async Task<List<BlogPost>> GetAll()
+        {
+            return await cookingContext.Set<BlogPost>()
+                .Include(bp => bp.Author)
+                .Include(bp => bp.Comments)
+                .Include(bp => bp.Categories)
+                    .ThenInclude(bpc => bpc.Category)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
         public async Task<List<BlogPost>> GetByCategory(int catid)
         {
             return await cookingContext.Set<BlogPost>()

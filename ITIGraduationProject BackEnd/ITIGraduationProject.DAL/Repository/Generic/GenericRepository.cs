@@ -16,7 +16,7 @@ namespace ITIGraduationProject.DAL
         {
             context = cookingContext;
         }
-        public async Task<List<T>> GetAll()
+        public virtual async Task<List<T>> GetAll()
         {
             return await context.Set<T>().ToListAsync();
         }

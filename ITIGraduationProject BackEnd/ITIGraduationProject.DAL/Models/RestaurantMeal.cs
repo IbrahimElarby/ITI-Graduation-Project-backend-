@@ -11,7 +11,7 @@ namespace ITIGraduationProject.DAL
         public int MealID { get; set; }
         public int RestaurantID { get; set; }
         public Restaurant? Restaurant { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public decimal Price { get; set; }
         public int Calories { get; set; }
     }
