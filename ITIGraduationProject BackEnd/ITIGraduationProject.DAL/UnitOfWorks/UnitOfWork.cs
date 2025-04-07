@@ -16,14 +16,18 @@ namespace ITIGraduationProject.DAL
         
         public IPostBlogRepository PostBlogRepository {  get; }
         public IRecipeRepository RecipeRepository {  get; }
+
+       public ICategoryRepository CategoryRepository { get; }
         public UnitOfWork(
             ApplicationDbContext cookingContext ,
             IPostBlogRepository _PostBlogRepository,
-            IRecipeRepository _RecipeRepository)
+            IRecipeRepository _RecipeRepository,
+            ICategoryRepository categoryRepository)
         {
             context = cookingContext;
             PostBlogRepository = _PostBlogRepository;
             RecipeRepository = _RecipeRepository;
+            CategoryRepository = categoryRepository;
         }
 
 

@@ -9,7 +9,8 @@
       "ITIGraduationProject.BL/1.0.0": {
         "dependencies": {
           "FluentValidation.AspNetCore": "11.3.0",
-          "ITIGraduationProject.DAL": "1.0.0"
+          "ITIGraduationProject.DAL": "1.0.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.4"
         },
         "runtime": {
           "ITIGraduationProject.BL.dll": {}
@@ -79,6 +80,14 @@
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "11.0.0.0",
             "fileVersion": "11.5.1.0"
+          }
+        }
+      },
+      "Microsoft.AspNet.Identity.Core/2.2.4": {
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.4.50621"
           }
         }
       },
@@ -711,7 +720,7 @@
         },
         "runtime": {
           "ITIGraduationProject.DAL.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -758,6 +767,13 @@
       "sha512": "sha512-iWM0LS1MDYX06pcjMEQKqHirl2zkjHlNV23mEJSoR1IZI7KQmTa0RcTtGEJpj5+iHvBCfrzP2mYKM4FtRKVb+A==",
       "path": "fluentvalidation.dependencyinjectionextensions/11.5.1",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-s3u/o3iG5h0z7Ggukwo4soPwogD56ZrYbolGxTfw41zkuG6jAXUJT/V3EThqHJXGuCNvWSdSnnwAhPfT9Sn36g==",
+      "path": "microsoft.aspnet.identity.core/2.2.4",
+      "hashPath": "microsoft.aspnet.identity.core.2.2.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/8.0.14": {
       "type": "package",

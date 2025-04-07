@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GraduationProject.BL\ITIGraduationProject.BL.csproj" />
   </ItemGroup>
 

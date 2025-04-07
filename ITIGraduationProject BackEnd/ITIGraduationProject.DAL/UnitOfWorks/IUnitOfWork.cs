@@ -8,6 +8,7 @@ namespace ITIGraduationProject.DAL
     {
        public IPostBlogRepository PostBlogRepository { get; }
        public IRecipeRepository RecipeRepository { get; }
+        public ICategoryRepository CategoryRepository { get; }
 
         Task<int> SaveChangesAsync();
     }

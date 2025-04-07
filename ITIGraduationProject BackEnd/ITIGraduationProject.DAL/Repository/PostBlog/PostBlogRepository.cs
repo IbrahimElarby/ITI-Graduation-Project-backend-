@@ -27,11 +27,24 @@ namespace ITIGraduationProject.DAL
                 .ToListAsync();
         }
 
+        public override async Task<BlogPost?> GetByIdAsync(int id)
+        {
+            return await cookingContext.Set<BlogPost>()
+            .Include(bp => bp.Author)
+            .Include(bp => bp.Comments)
+            .Include(bp => bp.Categories).ThenInclude(c => c.Category)
+            .AsSplitQuery() // <-- Improve performance, reduce duplication
+            .FirstOrDefaultAsync(bp => bp.BlogPostID == id);
+
+        }
         public async Task<List<BlogPost>> GetByCategory(int catid)
         {
             return await cookingContext.Set<BlogPost>()
+                .Include(bp => bp.Author)
+                .Include(bp => bp.Comments)
                 .Include(bp => bp.Categories)
                 .ThenInclude(bpc => bpc.Category)
+                .AsSplitQuery()
                 .AsNoTracking()
                 .Where(bp => bp.Categories.Any(bpc => bpc.CategoryID == catid))
                 .ToListAsync();

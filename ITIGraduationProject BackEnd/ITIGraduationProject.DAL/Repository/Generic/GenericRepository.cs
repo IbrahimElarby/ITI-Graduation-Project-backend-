@@ -10,7 +10,7 @@ namespace ITIGraduationProject.DAL
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
 
-        private ApplicationDbContext context;
+        protected ApplicationDbContext context;
 
         public GenericRepository(ApplicationDbContext cookingContext)
         {
@@ -20,7 +20,7 @@ namespace ITIGraduationProject.DAL
         {
             return await context.Set<T>().ToListAsync();
         }
-        public async Task<T?> GetByIdAsync(int id)
+        public virtual async Task<T?> GetByIdAsync(int id)
         {
             return await context.Set<T>().FindAsync(id);
         }
@@ -34,7 +34,7 @@ namespace ITIGraduationProject.DAL
 
         }
 
-        public void Delete(T entity)
+        public  void Delete(T entity)
         {
             context.Set<T>().Remove(entity);
         }
