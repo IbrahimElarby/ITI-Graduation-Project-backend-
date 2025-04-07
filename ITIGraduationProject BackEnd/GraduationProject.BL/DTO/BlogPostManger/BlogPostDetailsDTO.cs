@@ -1,4 +1,4 @@
-﻿using ITIGraduationProject.BL.DTO.BlogPostManger;
+﻿using ITIGraduationProject.BL;
 using System;
 using System.Collections.Generic;
 using System.Linq;

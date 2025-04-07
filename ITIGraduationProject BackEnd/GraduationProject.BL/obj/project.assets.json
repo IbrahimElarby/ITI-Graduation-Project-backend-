@@ -97,6 +97,19 @@
           }
         }
       },
+      "Microsoft.AspNet.Identity.Core/2.2.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/8.0.14": {
         "type": "package",
         "compile": {
@@ -1255,6 +1268,19 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.4": {
+      "sha512": "s3u/o3iG5h0z7Ggukwo4soPwogD56ZrYbolGxTfw41zkuG6jAXUJT/V3EThqHJXGuCNvWSdSnnwAhPfT9Sn36g==",
+      "type": "package",
+      "path": "microsoft.aspnet.identity.core/2.2.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.AspNet.Identity.Core.dll",
+        "lib/net45/Microsoft.AspNet.Identity.Core.xml",
+        "microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",
+        "microsoft.aspnet.identity.core.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/8.0.14": {
@@ -3106,27 +3132,28 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "FluentValidation.AspNetCore >= 11.3.0",
-      "ITIGraduationProject.DAL >= 1.0.0"
+      "ITIGraduationProject.DAL >= 1.0.0",
+      "Microsoft.AspNet.Identity.Core >= 2.2.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Max\\.nuget\\packages\\": {},
+    "C:\\Users\\Al Badr\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
+      "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
       "projectName": "ITIGraduationProject.BL",
-      "projectPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
-      "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\obj\\",
+      "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
+      "packagesPath": "C:\\Users\\Al Badr\\.nuget\\packages\\",
+      "outputPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\GraduationProject.BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Al Badr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3135,14 +3162,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
-              "projectPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj"
+            "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
+              "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj"
             }
           }
         }
@@ -3156,8 +3184,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -3166,6 +3193,10 @@
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[11.3.0, )"
+          },
+          "Microsoft.AspNet.Identity.Core": {
+            "target": "Package",
+            "version": "[2.2.4, )"
           }
         },
         "imports": [
@@ -3184,8 +3215,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

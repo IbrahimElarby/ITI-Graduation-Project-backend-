@@ -1,33 +1,25 @@
-﻿using ITIGraduationProject.BL.DTO.BlogPostManger;
-using ITIGraduationProject.BL.DTO.RecipeManger;
+﻿using ITIGraduationProject.BL.DTO.RecipeManger;
 using ITIGraduationProject.DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace ITIGraduationProject.BL.Manger
 {
     public class RecipeManger : IRecipeManger
     {
         private readonly IUnitOfWork unitOfWork;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public RecipeManger(IUnitOfWork _unitOfWork)
+        public RecipeManger(IUnitOfWork _unitOfWork, UserManager<ApplicationUser> _userManager)
         {
             unitOfWork = _unitOfWork;
+            userManager = _userManager;
         }
 
         public async Task<GeneralResult> AddAsync(RecipeDetailsDTO item)
         {
             try
             {
-                var creator = new ApplicationUser()
-                {
-                    UserName = item.Author.UserName,
-                    Email = item.Author.Email,
-                };
+                var creator = await userManager.FindByNameAsync(item.Author.UserName);
 
                 var recipe = new Recipe()
                 {
@@ -130,7 +122,7 @@ namespace ITIGraduationProject.BL.Manger
                 Author = new AuthorNestedDTO
                 {
                     UserName = r.Creator?.UserName,
-                    Email = r.Creator?.Email,
+                    
                 },
                 CategoryNames = r.Categories?.Select(c => c.Category?.Name).ToList() ?? new List<string>(),
                 Comments = r.Comments?.Select(c => new CommentNestedDTO

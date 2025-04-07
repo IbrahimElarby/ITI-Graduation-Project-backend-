@@ -538,3 +538,7 @@ D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\ITIG
 D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\ITIGraduationProject\obj\Debug\net8.0\ITIGraduationProject.pdb
 D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\ITIGraduationProject\obj\Debug\net8.0\ITIGraduationProject.genruntimeconfig.cache
 D:\ITI\Project\ITI-Graduation-Project-backend-\ITIGraduationProject BackEnd\ITIGraduationProject\obj\Debug\net8.0\ref\ITIGraduationProject.dll
+F:\iti 4 month\Graduation project\ITIGraduationProject BackEnd\ITIGraduationProject\bin\Debug\net8.0\FluentValidation.dll
+F:\iti 4 month\Graduation project\ITIGraduationProject BackEnd\ITIGraduationProject\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+F:\iti 4 month\Graduation project\ITIGraduationProject BackEnd\ITIGraduationProject\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+F:\iti 4 month\Graduation project\ITIGraduationProject BackEnd\ITIGraduationProject\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll

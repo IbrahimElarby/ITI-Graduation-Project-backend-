@@ -1,5 +1,6 @@
 ﻿
 using FluentValidation;
+using ITIGraduationProject.BL.Manger;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,10 @@ namespace ITIGraduationProject.BL
            
             services.AddValidatorsFromAssembly(
            typeof(BussinessExtentions).Assembly);
+            services.AddScoped<IBlogPostManger, BlogPostManger>();
+            services.AddScoped<IRecipeManger, RecipeManger>();
+            
+
 
 
         }

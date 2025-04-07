@@ -1,4 +1,4 @@
-﻿using ITIGraduationProject.BL.DTO.BlogPostManger;
+﻿using ITIGraduationProject.BL;
 using ITIGraduationProject.DAL;
 using System;
 using System.Collections.Generic;

@@ -18,6 +18,7 @@ namespace ITIGraduationProject.DAL
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<IPostBlogRepository, PostBlogRepository>();
             services.AddScoped<IRecipeRepository, RecipeRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
           
         }

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ITIGraduationProject.BL.DTO.BlogPostManger
+namespace ITIGraduationProject.BL
 {
     public class AuthorNestedDTO
     {
+        public string Id { get; set; }
         public string UserName { get; set; } = string.Empty; // From ApplicationUser
-        public string Email { get; set; } = string.Empty; // Or other safe fields
+         // Or other safe fields
     }
 }
