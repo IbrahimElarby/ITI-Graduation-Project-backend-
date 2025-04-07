@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {}
+    "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {}
   },
   "projects": {
-    "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
+    "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+        "projectUniqueName": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
         "projectName": "ITIGraduationProject.DAL",
-        "projectPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
-        "packagesPath": "C:\\Users\\Al Badr\\.nuget\\packages\\",
-        "outputPath": "F:\\iti 4 month\\Graduation project\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\obj\\",
+        "projectPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+        "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
+        "outputPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Al Badr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
