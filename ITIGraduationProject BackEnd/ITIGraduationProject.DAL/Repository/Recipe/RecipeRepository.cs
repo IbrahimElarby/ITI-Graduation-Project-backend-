@@ -1,10 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace ITIGraduationProject.DAL.Repository
 {
     public class RecipeRepository : GenericRepository<Recipe>, IRecipeRepository
@@ -18,7 +12,7 @@ namespace ITIGraduationProject.DAL.Repository
 
         public async Task<List<Recipe>> GetByCategory(int catId)
         {
-            return await cookingContext.Set<Recipe>()
+            return await cookingContext.Recipes
                 .Include(r => r.Creator)
                 .Include(r => r.RecipeIngredients)
                 .Include(r => r.Ratings)
@@ -32,7 +26,7 @@ namespace ITIGraduationProject.DAL.Repository
 
         public override async Task<List<Recipe>> GetAll()
         {
-            return await cookingContext.Set<Recipe>()
+            return await cookingContext.Recipes
                 .Include(r => r.Creator)
                 .Include(r => r.RecipeIngredients)
                 .Include(r => r.Ratings)
@@ -40,6 +34,20 @@ namespace ITIGraduationProject.DAL.Repository
                 .Include(r => r.Categories)
                     .ThenInclude(rc => rc.Category)
                 .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<List<Recipe>> GetByTitle(string title)
+        {
+            return await cookingContext.Recipes
+                .Include(r => r.Creator)
+                .Include(r => r.RecipeIngredients)
+                .Include(r => r.Ratings)
+                .Include(r => r.Comments)
+                .Include(r => r.Categories)
+                    .ThenInclude(rc => rc.Category)
+                .AsNoTracking()
+                .Where(r => r.Title.Contains(title))
                 .ToListAsync();
         }
     }

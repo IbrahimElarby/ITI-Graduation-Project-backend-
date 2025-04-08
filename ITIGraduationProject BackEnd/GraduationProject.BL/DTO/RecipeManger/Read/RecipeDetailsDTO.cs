@@ -1,4 +1,4 @@
-﻿using ITIGraduationProject.BL;
+﻿using ITIGraduationProject.BL.DTO.RecipeManger.Read;
 using ITIGraduationProject.DAL;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ITIGraduationProject.BL.DTO.RecipeManger
+namespace ITIGraduationProject.BL.DTO.RecipeManger.Output
 {
     public class RecipeDetailsDTO
     {
@@ -21,10 +21,20 @@ namespace ITIGraduationProject.BL.DTO.RecipeManger
 
 
         public AuthorNestedDTO Author { get; set; } = new();
+        public string CreatorName { get; set; }
+
+        public List<RecipeIngredientDto> Ingredients { get; set; }
+
+        public List<RatingDTO> Ratings { get; set; } = new();
         public List<CommentNestedDTO> Comments { get; set; } = new();
         public List<string> CategoryNames { get; set; } = new();
-        public List<RecipeIngredientDTO> RecipeIngredients { get; set; } = new();
-        public List<RatingDTO> Ratings { get; set; } = new();
 
+        public decimal TotalCalories
+        {
+            get
+            {
+                return Ingredients?.Sum(i => (i.CaloriesPer100g * i.Quantity) / 100) ?? 0;
+            }
+        }
     }
 }

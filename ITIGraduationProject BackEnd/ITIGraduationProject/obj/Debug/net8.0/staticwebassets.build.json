@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "T80y755/l4jDGw0Y3eylKwG1e464Z5PXCyicfgSprmg=",
+  "Hash": "anK/ZWUpy0YllGwBu8iWxvH+nVwynsq/JX56s17XQYc=",
   "Source": "ITIGraduationProject",
   "BasePath": "_content/ITIGraduationProject",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
