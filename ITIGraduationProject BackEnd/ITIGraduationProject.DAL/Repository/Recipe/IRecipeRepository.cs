@@ -9,5 +9,6 @@ namespace ITIGraduationProject.DAL.Repository
     public interface IRecipeRepository: IGenericRepository<Recipe>
     {
         Task<List<Recipe>> GetByCategory(int id);
+        Task<List<Recipe>> GetByTitle(string title);
     }
 }

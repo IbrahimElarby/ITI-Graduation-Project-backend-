@@ -1,5 +1,6 @@
 using ITIGraduationProject.BL;
 using ITIGraduationProject.DAL;
+using ITIGraduationProject.DAL.Repository.Ingredient;
 using Microsoft.AspNetCore.Identity;
 namespace ITIGraduationProject
 {
@@ -29,6 +30,8 @@ namespace ITIGraduationProject
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<IIngredientRepository, IngredientRepository>();
 
             var app = builder.Build();
 

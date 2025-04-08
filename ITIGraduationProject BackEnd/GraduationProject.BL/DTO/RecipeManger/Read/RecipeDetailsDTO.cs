@@ -1,5 +1,4 @@
-﻿using ITIGraduationProject.BL.DTO.BlogPostManger;
-using ITIGraduationProject.BL.DTO.RecipeManger.Read;
+﻿using ITIGraduationProject.BL.DTO.RecipeManger.Read;
 using ITIGraduationProject.DAL;
 using System;
 using System.Collections.Generic;
@@ -21,7 +20,7 @@ namespace ITIGraduationProject.BL.DTO.RecipeManger.Output
         public DateTime CreatedAt { get; set; }
 
 
-        //public AuthorNestedDTO Author { get; set; } = new();
+        public AuthorNestedDTO Author { get; set; } = new();
         public string CreatorName { get; set; }
 
         public List<RecipeIngredientDto> Ingredients { get; set; }
