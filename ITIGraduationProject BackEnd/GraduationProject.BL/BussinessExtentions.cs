@@ -1,6 +1,7 @@
 ﻿
 using FluentValidation;
 using ITIGraduationProject.BL.Manger;
+using ITIGraduationProject.BL.Manger.CategoryManger;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace ITIGraduationProject.BL
             services.AddScoped<IBlogPostManger, BlogPostManger>();
             services.AddScoped<IRecipeManger, RecipeManger>();
             services.AddScoped<IAccountManager, AccountManager>();
+            services.AddScoped<ICategoryManger, CategoryManger>();
             
 
 
