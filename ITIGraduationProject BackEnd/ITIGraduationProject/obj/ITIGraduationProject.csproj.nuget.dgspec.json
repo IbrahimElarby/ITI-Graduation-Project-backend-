@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\ITIGraduationProject.csproj": {}
+    "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\ITIGraduationProject.csproj": {}
   },
   "projects": {
-    "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj": {
+    "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
+        "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
         "projectName": "ITIGraduationProject.BL",
-        "projectPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
-        "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\obj\\",
+        "projectPath": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj",
+        "packagesPath": "C:\\Users\\Al Badr\\.nuget\\packages\\",
+        "outputPath": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Al Badr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
-                "projectPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj"
+              "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
+                "projectPath": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj"
               }
             }
           }
@@ -47,8 +48,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -79,24 +79,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
+    "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+        "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
         "projectName": "ITIGraduationProject.DAL",
-        "projectPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
-        "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\obj\\",
+        "projectPath": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\ITIGraduationProject.DAL.csproj",
+        "packagesPath": "C:\\Users\\Al Badr\\.nuget\\packages\\",
+        "outputPath": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Al Badr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -105,6 +105,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -122,8 +123,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -166,24 +166,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\ITIGraduationProject.csproj": {
+    "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\ITIGraduationProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\ITIGraduationProject.csproj",
+        "projectUniqueName": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\ITIGraduationProject.csproj",
         "projectName": "ITIGraduationProject",
-        "projectPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\ITIGraduationProject.csproj",
-        "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\obj\\",
+        "projectPath": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\ITIGraduationProject.csproj",
+        "packagesPath": "C:\\Users\\Al Badr\\.nuget\\packages\\",
+        "outputPath": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\ITIGraduationProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Al Badr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -192,14 +192,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj": {
-                "projectPath": "D:\\ITI\\Project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj"
+              "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj": {
+                "projectPath": "F:\\iti 4 month\\Graduation project\\ITI-Graduation-Project-backend-\\ITIGraduationProject BackEnd\\GraduationProject.BL\\ITIGraduationProject.BL.csproj"
               }
             }
           }
@@ -213,13 +214,16 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -256,7 +260,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

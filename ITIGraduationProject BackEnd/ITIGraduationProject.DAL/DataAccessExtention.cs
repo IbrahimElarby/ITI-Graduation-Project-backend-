@@ -1,4 +1,6 @@
 ﻿using ITIGraduationProject.DAL.Repository;
+using ITIGraduationProject.DAL.Repository.Account;
+using ITIGraduationProject.DAL.Repository.Ingredient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +21,8 @@ namespace ITIGraduationProject.DAL
             services.AddScoped<IPostBlogRepository, PostBlogRepository>();
             services.AddScoped<IRecipeRepository, RecipeRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IIngredientRepository, IngredientRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
           
         }

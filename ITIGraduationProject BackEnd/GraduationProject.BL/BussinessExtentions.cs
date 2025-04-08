@@ -20,6 +20,7 @@ namespace ITIGraduationProject.BL
            typeof(BussinessExtentions).Assembly);
             services.AddScoped<IBlogPostManger, BlogPostManger>();
             services.AddScoped<IRecipeManger, RecipeManger>();
+            services.AddScoped<IAccountManager, AccountManager>();
             
 
 
