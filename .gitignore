@@ -1,66 +1,40 @@
-# .NET
+# Build directories
 bin/
 obj/
 
-# User-specific files
+# Rider & VS Code & Visual Studio
 .idea/
 .vscode/
+.vs/
+*.suo
 *.user
 *.userosscache
-*.suo
 *.userprefs
-
-# Windows installer files
-Thumbs.db
-ehthumbs.db
-
-# ASP.NET Core / Visual Studio config
-.vs/
-.vscode/
-# Rider
-.idea/
 
 # Logs
 logs/
+*.log
 
-# ASP.NET Core App Data
+# Environment & config files
+.env
+secrets/
 appsettings.json
 appsettings.Development.json
 
-# Local development environment config files
-.env
-
-# Visual Studio for Mac config
-.vscode/
-
-# JetBrains Rider
-.idea/
-
-# Windows Installer files
-Thumbs.db
-ehthumbs.db
-
-# Dotnet publish output
-publish/
-
-# ASP.NET Core 3.x or newer
-wwwroot/
-
-# User secrets directory
-secrets/
-
-# Node modules
+# Node
 node_modules/
-
-# npm package-lock files
 package-lock.json
 yarn.lock
 
-# Build directories
-/bin/
-/obj/
+# ASP.NET Core
+publish/
+wwwroot/
 
-# Other system files
+# System/OS files
 .DS_Store
-.idea
-.vscode
+Thumbs.db
+ehthumbs.db
+
+# Cache & temporary files
+*.db
+*.cache
