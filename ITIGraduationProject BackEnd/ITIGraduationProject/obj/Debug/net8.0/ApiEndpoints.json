@@ -420,5 +420,63 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ITIGraduationProject.Controllers.SubscriptionController",
+    "Method": "CreateCheckoutSession",
+    "RelativePath": "api/Subscription/create-checkout-session",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.Controllers.SubscriptionController",
+    "Method": "PaymentCancelled",
+    "RelativePath": "api/Subscription/payment-cancelled",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.Controllers.SubscriptionController",
+    "Method": "PaymentSuccess",
+    "RelativePath": "api/Subscription/payment-success",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "session_id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.Controllers.SubscriptionController",
+    "Method": "GetSubscriptionDetails",
+    "RelativePath": "api/Subscription/subscription-details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
