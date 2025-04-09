@@ -1,9 +1,7 @@
 using ITIGraduationProject.BL;
 using ITIGraduationProject.BL.Manger.SubscriptionManger;
 using ITIGraduationProject.DAL;
-using ITIGraduationProject.DAL.Repository.Ingredient;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Stripe;
 using System.Text;
