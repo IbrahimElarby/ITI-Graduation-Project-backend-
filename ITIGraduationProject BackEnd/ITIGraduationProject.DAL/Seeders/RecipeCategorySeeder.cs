@@ -24,7 +24,7 @@ namespace ITIGraduationProject.DAL.Seeders
                 },
                 new RecipeCategory
                 {
-                    RecipeID = 2,
+                    RecipeID = 1,
                     CategoryID = 3
                 }
             );

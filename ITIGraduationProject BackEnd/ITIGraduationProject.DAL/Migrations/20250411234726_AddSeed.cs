@@ -14,13 +14,15 @@ namespace ITIGraduationProject.DAL.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.InsertData(
-                table: "AspNetUsers",
-                columns: new[] { "Id", "AccessFailedCount", "Bio", "ConcurrencyStamp", "Email", "EmailConfirmed", "LastLogin", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfileImageUrl", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                table: "BlogPosts",
+                columns: new[] { "BlogPostID", "AuthorID", "Content", "CreatedAt", "FeaturedImageUrl", "Title" },
                 values: new object[,]
                 {
-                    { 1, 0, null, "15e72db2-6c1a-4634-9bf2-c50cf8b39cd4", "admin@example.com", true, null, false, null, "ADMIN@EXAMPLE.COM", "ADMIN", "AQAAAAIAAYagAAAAECOkdyLoocLH+q5E1BlE47+1NQrDtza1+L2nftNj5IH6F4gczzpXtCx2Oscr6R8cYw==", null, false, null, null, false, "admin" },
-                    { 2, 0, null, "d7b27583-546b-4243-a656-9d4980f33a82", "chef1@example.com", true, null, false, null, "CHEF1@EXAMPLE.COM", "CHEF1", "AQAAAAIAAYagAAAAEIaTUCsTgtpCxNJv9dDP9oSvt9MwzCc4hDeIyPm8lVeHVqWHxcja268fqn0+2bew4Q==", null, false, null, null, false, "chef1" },
-                    { 3, 0, null, "b3dd7d7f-7a0e-47cb-b6f7-9a453914cf8d", "foodie@example.com", true, null, false, null, "FOODIE@EXAMPLE.COM", "FOODIE", "AQAAAAIAAYagAAAAENzxPSLbZKLjjaf5/11VTZVxpencAoQ+jt49Ox/GhZVBlQ5Th/Vue6ebP+7BY/80mw==", null, false, null, null, false, "foodie" }
+                    { 1, 1, "Start with boiling water, salt it properly, and don't forget to stir occasionally.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "10 Tips for Cooking Perfect Pasta" },
+                    { 2, 2, "Discover how olive oil, fresh veggies, and lean protein contribute to long-term health.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Benefits of Mediterranean Diet" },
+                    { 3, 3, "Explore the science behind the most important meal of the day.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Why Breakfast Matters" },
+                    { 4, 1, "Eating healthy is important for maintaining a balanced diet.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Healthy Eating" },
+                    { 5, 2, "Here are some tips for cooking delicious meals.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Cooking Tips" }
                 });
 
             migrationBuilder.InsertData(
@@ -45,28 +47,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     { 2, 402m, 1.3m, 33m, "Cheese", 25m },
                     { 3, 131m, 25m, 1.1m, "Pasta", 5m }
                 });
-
-            migrationBuilder.InsertData(
-                table: "BlogPosts",
-                columns: new[] { "BlogPostID", "AuthorID", "Content", "CreatedAt", "FeaturedImageUrl", "Title" },
-                values: new object[,]
-                {
-                    { 1, 1, "Start with boiling water, salt it properly, and don't forget to stir occasionally.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "10 Tips for Cooking Perfect Pasta" },
-                    { 2, 2, "Discover how olive oil, fresh veggies, and lean protein contribute to long-term health.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Benefits of Mediterranean Diet" },
-                    { 3, 3, "Explore the science behind the most important meal of the day.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Why Breakfast Matters" },
-                    { 4, 1, "Eating healthy is important for maintaining a balanced diet.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Healthy Eating" },
-                    { 5, 2, "Here are some tips for cooking delicious meals.", new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Cooking Tips" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "RecipeCategories",
-                columns: new[] { "CategoryID", "RecipeID" },
-                values: new object[] { 3, 2 });
-
-            migrationBuilder.InsertData(
-                table: "RecipeIngredients",
-                columns: new[] { "IngredientID", "RecipeID", "Quantity", "Unit" },
-                values: new object[] { 3, 2, 300m, "g" });
 
             migrationBuilder.InsertData(
                 table: "Recipes",
@@ -99,7 +79,8 @@ namespace ITIGraduationProject.DAL.Migrations
                 values: new object[,]
                 {
                     { 1, 1 },
-                    { 2, 1 }
+                    { 2, 1 },
+                    { 3, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -184,7 +165,7 @@ namespace ITIGraduationProject.DAL.Migrations
             migrationBuilder.DeleteData(
                 table: "RecipeCategories",
                 keyColumns: new[] { "CategoryID", "RecipeID" },
-                keyValues: new object[] { 3, 2 });
+                keyValues: new object[] { 3, 1 });
 
             migrationBuilder.DeleteData(
                 table: "RecipeIngredients",
@@ -200,16 +181,6 @@ namespace ITIGraduationProject.DAL.Migrations
                 table: "RecipeIngredients",
                 keyColumns: new[] { "IngredientID", "RecipeID" },
                 keyValues: new object[] { 3, 1 });
-
-            migrationBuilder.DeleteData(
-                table: "RecipeIngredients",
-                keyColumns: new[] { "IngredientID", "RecipeID" },
-                keyValues: new object[] { 3, 2 });
-
-            migrationBuilder.DeleteData(
-                table: "AspNetUsers",
-                keyColumn: "Id",
-                keyValue: 3);
 
             migrationBuilder.DeleteData(
                 table: "BlogPosts",
@@ -255,16 +226,6 @@ namespace ITIGraduationProject.DAL.Migrations
                 table: "Recipes",
                 keyColumn: "RecipeID",
                 keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "AspNetUsers",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "AspNetUsers",
-                keyColumn: "Id",
-                keyValue: 2);
         }
     }
 }

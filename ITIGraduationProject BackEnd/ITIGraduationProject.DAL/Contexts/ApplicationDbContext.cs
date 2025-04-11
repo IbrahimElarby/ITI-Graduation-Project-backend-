@@ -39,7 +39,7 @@ namespace ITIGraduationProject.DAL
             // Seed data
             var seeders = new List<ISeeder>
             {
-                new ApplicationUserSeeder(),
+                //new ApplicationUserSeeder(),
                 new IngredientSeeder(),
                 new CategorySeeder(),
                 new RecipeSeeder(),

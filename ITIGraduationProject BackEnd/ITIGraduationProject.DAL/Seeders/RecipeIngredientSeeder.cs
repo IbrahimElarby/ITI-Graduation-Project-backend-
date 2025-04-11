@@ -32,13 +32,6 @@ namespace ITIGraduationProject.DAL.Seeders
                     IngredientID = 1,
                     Quantity = 200,
                     Unit = "g"
-                },
-                new RecipeIngredient
-                {
-                    RecipeID = 2,
-                    IngredientID = 3,
-                    Quantity = 300,
-                    Unit = "g"
                 }
             );
         }

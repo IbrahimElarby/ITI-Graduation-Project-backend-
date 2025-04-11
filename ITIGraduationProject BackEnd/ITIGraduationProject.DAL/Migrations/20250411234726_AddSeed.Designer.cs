@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITIGraduationProject.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250411232555_AddSeed")]
+    [Migration("20250411234726_AddSeed")]
     partial class AddSeed
     {
         /// <inheritdoc />
@@ -109,56 +109,6 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "15e72db2-6c1a-4634-9bf2-c50cf8b39cd4",
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "admin@example.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "ADMIN@EXAMPLE.COM",
-                            NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAECOkdyLoocLH+q5E1BlE47+1NQrDtza1+L2nftNj5IH6F4gczzpXtCx2Oscr6R8cYw==",
-                            PhoneNumberConfirmed = false,
-                            TwoFactorEnabled = false,
-                            UserName = "admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "d7b27583-546b-4243-a656-9d4980f33a82",
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "chef1@example.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "CHEF1@EXAMPLE.COM",
-                            NormalizedUserName = "CHEF1",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIaTUCsTgtpCxNJv9dDP9oSvt9MwzCc4hDeIyPm8lVeHVqWHxcja268fqn0+2bew4Q==",
-                            PhoneNumberConfirmed = false,
-                            TwoFactorEnabled = false,
-                            UserName = "chef1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "b3dd7d7f-7a0e-47cb-b6f7-9a453914cf8d",
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "foodie@example.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "FOODIE@EXAMPLE.COM",
-                            NormalizedUserName = "FOODIE",
-                            PasswordHash = "AQAAAAIAAYagAAAAENzxPSLbZKLjjaf5/11VTZVxpencAoQ+jt49Ox/GhZVBlQ5Th/Vue6ebP+7BY/80mw==",
-                            PhoneNumberConfirmed = false,
-                            TwoFactorEnabled = false,
-                            UserName = "foodie"
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.BlogPost", b =>
@@ -623,7 +573,7 @@ namespace ITIGraduationProject.DAL.Migrations
                         },
                         new
                         {
-                            RecipeID = 2,
+                            RecipeID = 1,
                             CategoryID = 3
                         });
                 });
@@ -670,13 +620,6 @@ namespace ITIGraduationProject.DAL.Migrations
                             RecipeID = 1,
                             IngredientID = 1,
                             Quantity = 200m,
-                            Unit = "g"
-                        },
-                        new
-                        {
-                            RecipeID = 2,
-                            IngredientID = 3,
-                            Quantity = 300m,
                             Unit = "g"
                         });
                 });
