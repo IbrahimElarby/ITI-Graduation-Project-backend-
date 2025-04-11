@@ -74,7 +74,7 @@ namespace ITIGraduationProject
             });
 
             StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
-            builder.Services.AddScoped<SubscriptionManger>();
+            
 
 
             var app = builder.Build();
