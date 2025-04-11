@@ -5,18 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ITIGraduationProject.DAL.Repository.Ingredient
+namespace ITIGraduationProject.DAL
 {
-    public class IngredientRepository : GenericRepository<DAL.Ingredient>, IIngredientRepository
+    public class IngredientRepository : GenericRepository<Ingredient>, IIngredientRepository
     {
         public IngredientRepository(ApplicationDbContext cookingContext) : base(cookingContext)
         {
         }
 
-        public async Task<DAL.Ingredient> GetByIdAsync(int id)
+        public override async Task<Ingredient?> GetByIdAsync(int id)
         {
-            return await context.Set<DAL.Ingredient>()
-                .AsNoTracking()
+            return await context.Set<Ingredient>()
                 .FirstOrDefaultAsync(c => c.IngredientID == id);
         }
     }

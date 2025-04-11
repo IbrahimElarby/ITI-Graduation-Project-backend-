@@ -25,6 +25,7 @@ namespace ITIGraduationProject.BL
             services.AddScoped<IAccountManager, AccountManager>();
             services.AddScoped<ICategoryManger, CategoryManger>();
             services.AddScoped<ISubscriptionManger,SubscriptionManger>();
+            services.AddScoped<IIngredientManger, IngredientManger>();
 
 
 

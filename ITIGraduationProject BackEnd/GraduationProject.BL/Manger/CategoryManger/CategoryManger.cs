@@ -293,7 +293,7 @@ namespace ITIGraduationProject.BL.Manger.CategoryManger
                     return new GeneralResult
                     {
                         Success = false,
-                        Errors = [new ResultError { Code = "NullInput", Message = "Blog post cannot be null" }]
+                        Errors = [new ResultError { Code = "NullInput", Message = "Category cannot be null" }]
                     };
                 }
                 var category = await unitOfWork.CategoryRepository.GetByIdAsync(item.CategoryID);

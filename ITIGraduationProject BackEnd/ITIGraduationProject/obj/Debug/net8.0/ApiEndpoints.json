@@ -244,6 +244,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ITIGraduationProject.IngredientController",
+    "Method": "GetALL",
+    "RelativePath": "api/Ingredient",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.IngredientController",
+    "Method": "Add",
+    "RelativePath": "api/Ingredient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingredient",
+        "Type": "ITIGraduationProject.BL.DTO.RecipeManger.Read.IngredientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.IngredientController",
+    "Method": "Update",
+    "RelativePath": "api/Ingredient",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ingredient",
+        "Type": "ITIGraduationProject.BL.DTO.RecipeManger.Read.IngredientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.IngredientController",
+    "Method": "Delete",
+    "RelativePath": "api/Ingredient",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.IngredientController",
+    "Method": "GetById",
+    "RelativePath": "api/Ingredient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ITIGraduationProject.Controllers.RatingController",
     "Method": "CreateRating",
     "RelativePath": "api/Rating/ratings",
