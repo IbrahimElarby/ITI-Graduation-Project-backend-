@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using ITIGraduationProject.DAL.Seeders;
 
 namespace ITIGraduationProject.DAL
 {
@@ -34,6 +35,27 @@ namespace ITIGraduationProject.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // Seed data
+            var seeders = new List<ISeeder>
+            {
+                new ApplicationUserSeeder(),
+                new IngredientSeeder(),
+                new CategorySeeder(),
+                new RecipeSeeder(),
+                new RecipeIngredientSeeder(),
+                new RecipeCategorySeeder(),
+                new RatingSeeder(),
+                new CommentSeeder(),
+                new BlogPostSeeder(),
+                new BlogPostCategorySeeder(),
+            };
+
+            foreach (var seeder in seeders)
+            {
+                seeder.Seed(modelBuilder);
+            }
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
     }
