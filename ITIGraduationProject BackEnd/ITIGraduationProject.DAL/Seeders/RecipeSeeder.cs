@@ -21,7 +21,7 @@ namespace ITIGraduationProject.DAL.Seeders
                     PrepTime = 10,
                     CookingTime = 15,
                     CuisineType = "Italian",
-                    CreatedAt = DateTime.UtcNow,
+                    CreatedAt = new DateTime(2025, 4, 1),
                     CreatedBy = 1
                 }
         );

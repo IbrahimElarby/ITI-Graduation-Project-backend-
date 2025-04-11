@@ -18,7 +18,7 @@ namespace ITIGraduationProject.DAL.Seeders
                     RecipeID = 1,
                     UserID = 1,
                     Score = 5,
-                    CreatedAt = DateTime.UtcNow
+                    CreatedAt = new DateTime(2025, 4, 1)
                 }
             );
         }

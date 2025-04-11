@@ -17,7 +17,7 @@ namespace ITIGraduationProject.DAL.Seeders
                     BlogPostID = 1,
                     Title = "10 Tips for Cooking Perfect Pasta",
                     Content = "Start with boiling water, salt it properly, and don't forget to stir occasionally.",
-                    CreatedAt = DateTime.Now.AddDays(-10),
+                    CreatedAt = new DateTime(2025, 4, 1),
                     AuthorID = 1
                 },
                 new BlogPost
@@ -25,7 +25,7 @@ namespace ITIGraduationProject.DAL.Seeders
                     BlogPostID = 2,
                     Title = "Benefits of Mediterranean Diet",
                     Content = "Discover how olive oil, fresh veggies, and lean protein contribute to long-term health.",
-                    CreatedAt = DateTime.Now.AddDays(-5),
+                    CreatedAt = new DateTime(2025, 4, 1),
                     AuthorID = 2
                 },
                 new BlogPost
@@ -33,7 +33,7 @@ namespace ITIGraduationProject.DAL.Seeders
                     BlogPostID = 3,
                     Title = "Why Breakfast Matters",
                     Content = "Explore the science behind the most important meal of the day.",
-                    CreatedAt = DateTime.Now.AddDays(-2),
+                    CreatedAt = new DateTime(2025, 4, 1),
                     AuthorID = 3
                 },
             new BlogPost
@@ -41,7 +41,7 @@ namespace ITIGraduationProject.DAL.Seeders
                 BlogPostID = 4,
                 Title = "Healthy Eating",
                 Content = "Eating healthy is important for maintaining a balanced diet.",
-                CreatedAt = DateTime.UtcNow,
+                CreatedAt = new DateTime(2025, 4, 1),
                 AuthorID = 1
             },
                 new BlogPost
@@ -49,7 +49,7 @@ namespace ITIGraduationProject.DAL.Seeders
                     BlogPostID = 5,
                     Title = "Cooking Tips",
                     Content = "Here are some tips for cooking delicious meals.",
-                    CreatedAt = DateTime.UtcNow,
+                    CreatedAt = new DateTime(2025, 4, 1),
                     AuthorID = 2
                 }
             );

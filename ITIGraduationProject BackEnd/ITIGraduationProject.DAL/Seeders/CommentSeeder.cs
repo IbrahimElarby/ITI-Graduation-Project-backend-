@@ -17,7 +17,7 @@ namespace ITIGraduationProject.DAL.Seeders
                     CommentID = 1,
                     RecipeID = 1,
                     Text = "Great recipe!",
-                    CreatedAt = DateTime.UtcNow,
+                    CreatedAt = new DateTime(2025, 4, 1),
                     UserID = 1
                 }
             );
