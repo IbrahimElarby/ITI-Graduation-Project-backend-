@@ -1,6 +1,6 @@
 ﻿using ITIGraduationProject.DAL.Repository;
 using ITIGraduationProject.DAL.Repository.Account;
-using ITIGraduationProject.DAL.Repository.Ingredient;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

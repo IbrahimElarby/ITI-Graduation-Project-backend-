@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ITIGraduationProject.DAL
 {
-    public interface IIngredientRepository
+    public interface IIngredientRepository : IGenericRepository<Ingredient>
     {
-        public Task<Ingredient> GetByIdAsync(int id);
+        
 
     }
 }
