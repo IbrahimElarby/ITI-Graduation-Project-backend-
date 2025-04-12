@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ITIGraduationProject.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+822d2088f32f5aa13b023513cd28a2a818b81db9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8500b76965553193621150bd24e1f40f8d9fd668")]
 [assembly: System.Reflection.AssemblyProductAttribute("ITIGraduationProject.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ITIGraduationProject.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

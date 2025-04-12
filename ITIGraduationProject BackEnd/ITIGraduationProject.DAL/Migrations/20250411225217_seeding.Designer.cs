@@ -4,6 +4,7 @@ using ITIGraduationProject.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITIGraduationProject.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250411225217_seeding")]
+    partial class seeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -136,48 +139,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasIndex("AuthorID");
 
                     b.ToTable("BlogPosts");
-
-                    b.HasData(
-                        new
-                        {
-                            BlogPostID = 1,
-                            AuthorID = 1,
-                            Content = "Start with boiling water, salt it properly, and don't forget to stir occasionally.",
-                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Title = "10 Tips for Cooking Perfect Pasta"
-                        },
-                        new
-                        {
-                            BlogPostID = 2,
-                            AuthorID = 2,
-                            Content = "Discover how olive oil, fresh veggies, and lean protein contribute to long-term health.",
-                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Title = "Benefits of Mediterranean Diet"
-                        },
-                        new
-                        {
-                            BlogPostID = 3,
-                            AuthorID = 3,
-                            Content = "Explore the science behind the most important meal of the day.",
-                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Title = "Why Breakfast Matters"
-                        },
-                        new
-                        {
-                            BlogPostID = 4,
-                            AuthorID = 1,
-                            Content = "Eating healthy is important for maintaining a balanced diet.",
-                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Title = "Healthy Eating"
-                        },
-                        new
-                        {
-                            BlogPostID = 5,
-                            AuthorID = 2,
-                            Content = "Here are some tips for cooking delicious meals.",
-                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Title = "Cooking Tips"
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.BlogPostCategory", b =>
@@ -193,23 +154,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasIndex("CategoryID");
 
                     b.ToTable("BlogPostCategories");
-
-                    b.HasData(
-                        new
-                        {
-                            BlogPostID = 1,
-                            CategoryID = 1
-                        },
-                        new
-                        {
-                            BlogPostID = 1,
-                            CategoryID = 2
-                        },
-                        new
-                        {
-                            BlogPostID = 2,
-                            CategoryID = 1
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.Category", b =>
@@ -226,38 +170,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasKey("CategoryID");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            CategoryID = 1,
-                            Name = "Appetizer"
-                        },
-                        new
-                        {
-                            CategoryID = 2,
-                            Name = "Vegetarian"
-                        },
-                        new
-                        {
-                            CategoryID = 3,
-                            Name = "Dessert"
-                        },
-                        new
-                        {
-                            CategoryID = 4,
-                            Name = "Salad"
-                        },
-                        new
-                        {
-                            CategoryID = 5,
-                            Name = "Soup"
-                        },
-                        new
-                        {
-                            CategoryID = 6,
-                            Name = "Italian"
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.Comment", b =>
@@ -292,16 +204,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasIndex("UserID");
 
                     b.ToTable("Comments");
-
-                    b.HasData(
-                        new
-                        {
-                            CommentID = 1,
-                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            RecipeID = 1,
-                            Text = "Great recipe!",
-                            UserID = 1
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.Ingredient", b =>
@@ -332,35 +234,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasKey("IngredientID");
 
                     b.ToTable("Ingredients");
-
-                    b.HasData(
-                        new
-                        {
-                            IngredientID = 1,
-                            CaloriesPer100g = 18m,
-                            Carbs = 3.9m,
-                            Fats = 0.2m,
-                            Name = "Tomato",
-                            Protein = 0.9m
-                        },
-                        new
-                        {
-                            IngredientID = 2,
-                            CaloriesPer100g = 402m,
-                            Carbs = 1.3m,
-                            Fats = 33m,
-                            Name = "Cheese",
-                            Protein = 25m
-                        },
-                        new
-                        {
-                            IngredientID = 3,
-                            CaloriesPer100g = 131m,
-                            Carbs = 25m,
-                            Fats = 1.1m,
-                            Name = "Pasta",
-                            Protein = 5m
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.MealSuggestion", b =>
@@ -473,16 +346,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasIndex("UserID");
 
                     b.ToTable("Ratings");
-
-                    b.HasData(
-                        new
-                        {
-                            RatingID = 1,
-                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            RecipeID = 1,
-                            Score = 5,
-                            UserID = 1
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.Recipe", b =>
@@ -527,20 +390,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasIndex("CreatedBy");
 
                     b.ToTable("Recipes");
-
-                    b.HasData(
-                        new
-                        {
-                            RecipeID = 1,
-                            CookingTime = 15,
-                            CreatedAt = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedBy = 1,
-                            CuisineType = "Italian",
-                            Description = "A classic Italian dish.",
-                            Instructions = "Boil pasta, add cheese.",
-                            PrepTime = 10,
-                            Title = "Spaghetti with Cheese"
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.RecipeCategory", b =>
@@ -556,23 +405,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasIndex("CategoryID");
 
                     b.ToTable("RecipeCategories");
-
-                    b.HasData(
-                        new
-                        {
-                            RecipeID = 1,
-                            CategoryID = 1
-                        },
-                        new
-                        {
-                            RecipeID = 1,
-                            CategoryID = 2
-                        },
-                        new
-                        {
-                            RecipeID = 1,
-                            CategoryID = 3
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.RecipeIngredient", b =>
@@ -596,29 +428,6 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.HasIndex("IngredientID");
 
                     b.ToTable("RecipeIngredients");
-
-                    b.HasData(
-                        new
-                        {
-                            RecipeID = 1,
-                            IngredientID = 3,
-                            Quantity = 100m,
-                            Unit = "grams"
-                        },
-                        new
-                        {
-                            RecipeID = 1,
-                            IngredientID = 2,
-                            Quantity = 50m,
-                            Unit = "grams"
-                        },
-                        new
-                        {
-                            RecipeID = 1,
-                            IngredientID = 1,
-                            Quantity = 200m,
-                            Unit = "g"
-                        });
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.Restaurant", b =>
