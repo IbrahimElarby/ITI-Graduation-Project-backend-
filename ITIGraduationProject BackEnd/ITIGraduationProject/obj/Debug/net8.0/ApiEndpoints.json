@@ -318,6 +318,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ITIGraduationProject.BlogPostCategoryController",
+    "Method": "AssignCategory",
+    "RelativePath": "api/posts/{postId}/categories/{categoryId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.BlogPostCategoryController",
+    "Method": "UnassignCategory",
+    "RelativePath": "api/posts/{postId}/categories/{categoryId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ITIGraduationProject.Controllers.RatingController",
     "Method": "CreateRating",
     "RelativePath": "api/Rating/ratings",
