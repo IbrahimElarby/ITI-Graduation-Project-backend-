@@ -27,6 +27,7 @@ namespace ITIGraduationProject.BL
             services.AddScoped<ISubscriptionManger,SubscriptionManger>();
             services.AddScoped<IIngredientManger, IngredientManger>();
             services.AddScoped<IBlogPostCategoryManger, BlogPostCategoryManger>();
+            services.AddScoped<IRecipeCategoryManger, RecipeCategoryManger>();
 
 
 

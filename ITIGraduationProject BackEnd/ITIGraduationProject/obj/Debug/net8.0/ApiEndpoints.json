@@ -538,6 +538,48 @@
     ]
   },
   {
+    "ContainingType": "ITIGraduationProject.RecipeCategoryController",
+    "Method": "AssignCategory",
+    "RelativePath": "api/recipes/{recipeId}/categories/{categoryId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.RecipeCategoryController",
+    "Method": "UnassignCategory",
+    "RelativePath": "api/recipes/{recipeId}/categories/{categoryId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ITIGraduationProject.Controllers.SubscriptionController",
     "Method": "CreateCheckoutSession",
     "RelativePath": "api/Subscription/create-checkout-session",
