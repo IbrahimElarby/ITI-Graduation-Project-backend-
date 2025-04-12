@@ -1,9 +1,11 @@
+using BugProject;
 using ITIGraduationProject.BL;
 using ITIGraduationProject.BL.Manger.SubscriptionManger;
 using ITIGraduationProject.DAL;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Stripe;
+using System.Security.Claims;
 using System.Text;
 namespace ITIGraduationProject
 {
@@ -74,8 +76,30 @@ namespace ITIGraduationProject
             });
 
             StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
-            
 
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy(
+                    Constatnts.Policies.ForAdminOnly,
+                    builder => builder
+                        .RequireClaim(ClaimTypes.Role, "Manager", "Developer")
+                        .RequireClaim(ClaimTypes.NameIdentifier)
+                );
+
+                options.AddPolicy(
+                    Constatnts.Policies.ForDev,
+                    builder => builder
+                        .RequireClaim(ClaimTypes.Role, "Developer","PremiumUser")
+                        .RequireClaim(ClaimTypes.NameIdentifier)
+                );
+                options.AddPolicy(
+                  Constatnts.Policies.ForTester,
+                  builder => builder
+                      .RequireClaim(ClaimTypes.Role, "Developer", "Tester")
+                      .RequireClaim(ClaimTypes.NameIdentifier)
+              );
+
+            });
 
             var app = builder.Build();
 

@@ -1,7 +1,11 @@
 ﻿using ITIGraduationProject.BL.DTO;
 using ITIGraduationProject.BL.Manger;
+using ITIGraduationProject.DAL;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace ITIGraduationProject.Controllers
 {
@@ -10,10 +14,24 @@ namespace ITIGraduationProject.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountManager _accountManager;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public AccountController(IAccountManager accountManager)
+        public AccountController(IAccountManager accountManager, UserManager<ApplicationUser> _userManager)
         {
             _accountManager = accountManager;
+            userManager = _userManager;
+        }
+        [HttpPost("assign-role")]
+        public async Task<Results<Ok<string>, NotFound<string>>> AssignRole(string userName, string role)
+        {
+            var user = await userManager.FindByNameAsync(userName);
+            if (user == null)
+                return TypedResults.NotFound("User not found");
+
+            var claim = new Claim(ClaimTypes.Role, role);
+            await userManager.AddClaimAsync(user, claim);
+
+            return TypedResults.Ok($"Role '{role}' added to user '{userName}'");
         }
 
         [HttpPost("Register")]
