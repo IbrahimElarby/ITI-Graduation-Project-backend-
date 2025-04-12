@@ -25,7 +25,7 @@ namespace ITIGraduationProject.DAL
             return await context.Set<T>().FindAsync(id);
         }
 
-        public void Add(T entity)
+        public virtual void Add(T entity)
         {
             context.Set<T>().Add(entity);
         }
@@ -34,7 +34,7 @@ namespace ITIGraduationProject.DAL
 
         }
 
-        public  void Delete(T entity)
+        public virtual  void Delete(T entity)
         {
             context.Set<T>().Remove(entity);
         }

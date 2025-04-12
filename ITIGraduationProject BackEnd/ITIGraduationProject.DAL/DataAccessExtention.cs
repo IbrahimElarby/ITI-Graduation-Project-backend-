@@ -23,6 +23,7 @@ namespace ITIGraduationProject.DAL
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IIngredientRepository, IngredientRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IBlogPostCategoryRepository, BlogPostCategoryRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
           
         }

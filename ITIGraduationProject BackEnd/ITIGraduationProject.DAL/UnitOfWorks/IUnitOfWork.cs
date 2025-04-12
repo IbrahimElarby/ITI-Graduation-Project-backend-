@@ -12,6 +12,8 @@ namespace ITIGraduationProject.DAL
         public ICategoryRepository CategoryRepository { get; }
         public IIngredientRepository IngredientRepository { get; }
 
+        public IBlogPostCategoryRepository PostCategoryRepository { get; }
+
         Task<int> SaveChangesAsync();
     }
 }
