@@ -48,6 +48,26 @@ namespace ITIGraduationProject.BL
         [JsonPropertyName("quantity")]
         public string Quantity { get; set; }
     }
+    public class NutritionResponse
+    {
+        public string FoodName { get; set; }
+        public NutritionInfo Nutrition { get; set; }
+    }
+
+    public class NutritionInfo
+    {
+        [JsonPropertyName("calories in kcal")]
+        public decimal Calories { get; set; }
+
+        [JsonPropertyName("total fat in g")]
+        public decimal Fat { get; set; }
+
+        [JsonPropertyName("total carbohydrate in g")]
+        public decimal Carbohydrates { get; set; }
+
+        [JsonPropertyName("protein in g")]
+        public decimal Protein { get; set; }
+    }
 
 
 }

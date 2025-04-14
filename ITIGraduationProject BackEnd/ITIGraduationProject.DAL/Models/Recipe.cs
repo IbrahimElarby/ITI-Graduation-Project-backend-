@@ -18,6 +18,9 @@ namespace ITIGraduationProject.DAL
         public string? CuisineType { get; set; }
 
         public decimal Calories { get; set; }
+        public decimal Protein { get; set; }
+        public decimal Carbs { get; set; }
+        public decimal Fats { get; set; }
         public DateTime CreatedAt { get; set; }
 
         // Relationships

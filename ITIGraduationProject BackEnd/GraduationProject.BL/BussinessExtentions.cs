@@ -29,6 +29,7 @@ namespace ITIGraduationProject.BL
             services.AddScoped<IBlogPostCategoryManger, BlogPostCategoryManger>();
             services.AddScoped<IRecipeCategoryManger, RecipeCategoryManger>();
             services.AddHttpClient<ExternalRecipeService>();
+            services.AddHttpClient<NutritionService>();
 
 
 
