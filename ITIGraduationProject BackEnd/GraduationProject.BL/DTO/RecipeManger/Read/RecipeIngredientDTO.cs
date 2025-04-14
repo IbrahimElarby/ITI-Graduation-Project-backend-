@@ -23,5 +23,9 @@
 
         public decimal CaloriesPer100g { get; set; }
         public decimal Protein { get; set; }
+        public decimal fats { get; set; }
+
+        public decimal carbs { get; set; }
+
     }
 }

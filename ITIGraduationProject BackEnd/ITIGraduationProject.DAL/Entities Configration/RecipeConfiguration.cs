@@ -27,6 +27,15 @@ namespace ITIGraduationProject.DAL
                 .IsRequired()
                 .HasDefaultValueSql("GETUTCDATE()");
 
+            builder.Property(r => r.Calories)
+                .HasPrecision(10, 2);
+            builder.Property(r => r.Carbs)
+                .HasPrecision(10, 2);
+            builder.Property(r => r.Protein)
+               .HasPrecision(10, 2);
+            builder.Property(r => r.Fats)
+                .HasPrecision(10, 2);
+
             // Relationships
             builder.HasOne(r => r.Creator)
                 .WithMany(u => u.Recipes)

@@ -52,6 +52,10 @@ namespace ITIGraduationProject.DAL.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("LastLogin")
                         .HasColumnType("datetime2");
 
@@ -126,6 +130,10 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FeaturedImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -219,6 +227,10 @@ namespace ITIGraduationProject.DAL.Migrations
 
                     b.Property<decimal>("Fats")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -354,10 +366,12 @@ namespace ITIGraduationProject.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RecipeID"));
 
                     b.Property<decimal>("Calories")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(10, 2)
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<decimal>("Carbs")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(10, 2)
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("CookingTime")
                         .HasColumnType("int");
@@ -378,7 +392,12 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasColumnType("nvarchar(2000)");
 
                     b.Property<decimal>("Fats")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(10, 2)
+                        .HasColumnType("decimal(10,2)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Instructions")
                         .HasColumnType("nvarchar(max)");
@@ -387,7 +406,8 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Protein")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(10, 2)
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<string>("Title")
                         .IsRequired()
