@@ -19,12 +19,12 @@ namespace ITIGraduationProject
         }
 
         [HttpGet]
-        public async Task<Ok<List<IngredientDto>>> GetALL()
+        public async Task<Ok<List<RecipeIngredientDTO>>> GetALL()
         {
             return TypedResults.Ok(await ingredientManger.GetAll());
         }
         [HttpGet("{id}")]
-        public async Task<Results<Ok<IngredientDto>, NotFound>> GetById(int id)
+        public async Task<Results<Ok<RecipeIngredientDTO>, NotFound>> GetById(int id)
         {
             var ingredient = await ingredientManger.GetById(id);
             if (ingredient == null)
@@ -36,7 +36,7 @@ namespace ITIGraduationProject
 
 
         [HttpPost]
-        public async Task<Results<Ok<GeneralResult>, BadRequest<GeneralResult>>> Add(IngredientDto ingredient)
+        public async Task<Results<Ok<GeneralResult>, BadRequest<GeneralResult>>> Add(RecipeIngredientDTO ingredient)
         {
             var result = await ingredientManger.AddAsync(ingredient);
             if (result.Success)
@@ -47,7 +47,7 @@ namespace ITIGraduationProject
         }
 
         [HttpPut]
-        public async Task<Results<Ok<GeneralResult>, BadRequest<GeneralResult>>> Update(IngredientDto ingredient)
+        public async Task<Results<Ok<GeneralResult>, BadRequest<GeneralResult>>> Update(RecipeIngredientDTO ingredient)
         {
             {
                 var result = await ingredientManger.UpdateAsync(ingredient);

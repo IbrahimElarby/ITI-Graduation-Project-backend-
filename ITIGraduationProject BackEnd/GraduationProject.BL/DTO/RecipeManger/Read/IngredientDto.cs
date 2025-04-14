@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITIGraduationProject.BL.DTO.RecipeManger.Read
 {
-    public class IngredientDto
+    public class RecipeIngredientDTO
     {
         public int IngredientID { get; set; }
         public string Name { get; set; }

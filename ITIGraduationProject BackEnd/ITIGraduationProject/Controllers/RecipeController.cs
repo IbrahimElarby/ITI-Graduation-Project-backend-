@@ -76,5 +76,17 @@ namespace ITIGraduationProject.Controllers
                 return BadRequest(result);
             return Ok(result);
         }
+        [HttpPost("generate-ai")]
+        [ProducesResponseType(typeof(GeneralResult<RecipeDetailsDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(GeneralResult<RecipeDetailsDTO>), StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<GeneralResult<RecipeDetailsDTO>>> GenerateFromAI([FromBody] AiRecipeRequest input)
+        {
+            var result = await recipeManager.ImportAndSaveRecipe(input);
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
     }
 }

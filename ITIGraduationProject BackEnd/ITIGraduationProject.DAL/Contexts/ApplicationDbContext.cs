@@ -37,24 +37,24 @@ namespace ITIGraduationProject.DAL
             base.OnModelCreating(modelBuilder);
 
             // Seed data
-            var seeders = new List<ISeeder>
-            {
-                //new ApplicationUserSeeder(),
-                new IngredientSeeder(),
-                new CategorySeeder(),
-                new RecipeSeeder(),
-                new RecipeIngredientSeeder(),
-                new RecipeCategorySeeder(),
-                new RatingSeeder(),
-                new CommentSeeder(),
-                new BlogPostSeeder(),
-                new BlogPostCategorySeeder(),
-            };
+            //var seeders = new List<ISeeder>
+            //{
+            //    new ApplicationUserSeeder(),
+            //    new IngredientSeeder(),
+            //    new CategorySeeder(),
+            //    new RecipeSeeder(),
+            //    new RecipeIngredientSeeder(),
+            //    new RecipeCategorySeeder(),
+            //    new RatingSeeder(),
+            //    new CommentSeeder(),
+            //    new BlogPostSeeder(),
+            //    new BlogPostCategorySeeder(),
+            //};
 
-            foreach (var seeder in seeders)
-            {
-                seeder.Seed(modelBuilder);
-            }
+            //foreach (var seeder in seeders)
+            //{
+            //    seeder.Seed(modelBuilder);
+            //}
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }

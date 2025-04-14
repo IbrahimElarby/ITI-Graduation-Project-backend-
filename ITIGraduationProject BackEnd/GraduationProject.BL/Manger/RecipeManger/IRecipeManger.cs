@@ -17,6 +17,7 @@ namespace ITIGraduationProject.BL.Manger
         public Task<GeneralResult> UpdateAsync(RecipeDetailsDTO item);
         public Task<GeneralResult> AddAsync(RecipeCreateDto item);
         public Task<GeneralResult> DeleteAsync(int id);
+        public Task<GeneralResult<RecipeDetailsDTO>> ImportAndSaveRecipe(AiRecipeRequest input);
 
     }
 }
