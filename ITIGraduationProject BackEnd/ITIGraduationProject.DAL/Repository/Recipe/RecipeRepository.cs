@@ -15,33 +15,39 @@ namespace ITIGraduationProject.DAL.Repository
             return await cookingContext.Recipes
                 .Include(r => r.Creator)
                 .Include(r => r.RecipeIngredients)
+                 .ThenInclude(ri => ri.Ingredient)
                 .Include(r => r.Ratings)
                 .Include(r => r.Comments)
                 .Include(r => r.Categories)
                     .ThenInclude(rc => rc.Category)
                 .AsNoTracking()
+                .AsSplitQuery()
                 .Where(r => r.Categories.Any(rc => rc.CategoryID == catId))
                 .ToListAsync();
         }
 
         public override async Task<List<Recipe>> GetAll()
         {
-            return await cookingContext.Recipes
+            return await cookingContext.Set<Recipe>()
                 .Include(r => r.Creator)
                 .Include(r => r.RecipeIngredients)
+                .ThenInclude(ri=> ri.Ingredient)
                 .Include(r => r.Ratings)
                 .Include(r => r.Comments)
                 .Include(r => r.Categories)
                     .ThenInclude(rc => rc.Category)
+
                 .AsNoTracking()
+                .AsSplitQuery()
                 .ToListAsync();
         }
 
-        public async Task<List<Recipe>> GetByTitle(string title)
+        public  async Task<List<Recipe>> GetByTitle(string title)
         {
             return await cookingContext.Recipes
                 .Include(r => r.Creator)
                 .Include(r => r.RecipeIngredients)
+                 .ThenInclude(ri => ri.Ingredient)
                 .Include(r => r.Ratings)
                 .Include(r => r.Comments)
                 .Include(r => r.Categories)

@@ -8,3 +8,7 @@ Accept: application/json
 POST {{ITIGraduationProject_HostAddress}}/api/recipe/generate-ai?ingredients=string&diet=string&mealType=string
 
 ###
+
+GET {{ITIGraduationProject_HostAddress}}/api/recipe/2
+
+###

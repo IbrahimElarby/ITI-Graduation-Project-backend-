@@ -13,12 +13,14 @@ public class RecipeManger : IRecipeManger
     private readonly IUnitOfWork unitOfWork;
     private readonly UserManager<ApplicationUser> userManager;
     private readonly ExternalRecipeService _externalRecipeService;
+    private readonly NutritionService _nutritionService;
 
-    public RecipeManger(IUnitOfWork _unitOfWork, UserManager<ApplicationUser> _userManager, ExternalRecipeService externalRecipeService)
+    public RecipeManger(IUnitOfWork _unitOfWork, UserManager<ApplicationUser> _userManager, ExternalRecipeService externalRecipeService , NutritionService nutritionService)
     {
         unitOfWork = _unitOfWork;
         userManager = _userManager;
         _externalRecipeService = externalRecipeService;
+        _nutritionService = nutritionService;
     }
 
     public async Task<GeneralResult> AddAsync(RecipeCreateDto item)
@@ -157,30 +159,55 @@ public class RecipeManger : IRecipeManger
         return new GeneralResult { Success = true };
     }
 
-    private RecipeDetailsDTO ToRecipeDetailsDTO(Recipe r) => new()
+    private RecipeDetailsDTO ToRecipeDetailsDTO(Recipe recipe)
     {
-        RecipeID = r.RecipeID,
-        Title = r.Title,
-        Description = r.Description,
-        Instructions = r.Instructions,
-        PrepTime = r.PrepTime,
-        CookingTime = r.CookingTime,
-        CuisineType = r.CuisineType,
-        CreatedAt = r.CreatedAt,
-        Author = new AuthorNestedDTO { UserName = r.Creator?.UserName },
-        CategoryNames = r.Categories?.Select(c => c.Category?.Name).ToList() ?? new List<string>(),
-        Comments = r.Comments?.Select(c => new CommentNestedDTO
+        return new RecipeDetailsDTO
         {
-            CommentID = c.CommentID,
-            Content = c.Text,
-            CreatedAt = c.CreatedAt
-        }).ToList() ?? new List<CommentNestedDTO>(),
-        Ratings = r.Ratings?.Select(rt => new RatingDTO
-        {
-            Score = rt.Score
-        }).ToList() ?? new List<RatingDTO>()
+            RecipeID = recipe.RecipeID,
+            Title = recipe.Title,
+            Instructions = recipe.Instructions,
+            PrepTime = recipe.PrepTime,
+            Calories = recipe.Calories,
+            Protein = recipe.Protein,
+            Carbs = recipe.Carbs,
+            Fats = recipe.Fats,
+            Description = recipe.Description,
+            CookingTime = recipe.CookingTime,
+            CuisineType = recipe.CuisineType,
+            CreatedAt = recipe.CreatedAt,
+            Author = new AuthorNestedDTO
+            {
+                Id = recipe.CreatedBy.ToString(),
+                UserName = recipe.Creator?.UserName
+            },
+            CreatorName = recipe.Creator?.UserName,
+            Ingredients = recipe.RecipeIngredients?.Select(ri => new RecipeIngredientDto
+            {
+                IngredientName = ri.Ingredient?.Name,
+                Quantity = ri.Quantity,
+                Unit = ri.Unit,
+                CaloriesPer100g = ri.Ingredient?.CaloriesPer100g ?? 0
+            }).ToList() ?? new List<RecipeIngredientDto>(),
 
-    };
+            Ratings = recipe.Ratings?.Select(r => new RatingDTO
+            {
+                Score = r.Score,
+                
+            }).ToList() ?? new List<RatingDTO>(),
+
+            Comments = recipe.Comments?.Select(c => new CommentNestedDTO
+            {
+                CommentID = c.CommentID,
+                Content = c.Text,
+                CreatedAt = c.CreatedAt,
+                
+                
+            }).ToList() ?? new List<CommentNestedDTO>(),
+
+            CategoryNames = recipe.Categories?.Select(rc => rc.Category?.Name).ToList() ?? new List<string>()
+        };
+    }
+
 
     public async Task<GeneralResult<RecipeDetailsDTO>> ImportAndSaveRecipe(AiRecipeRequest input)
     {
@@ -195,24 +222,22 @@ public class RecipeManger : IRecipeManger
         }
 
         // Parse total nutrition
-        var totalCalories = aiRecipe.Nutrition.Calories;
-        var totalProtein = decimal.TryParse(aiRecipe.Nutrition.Protein, out var p) ? p : 0; ;
-        var totalCarbs = decimal.TryParse(aiRecipe.Nutrition.Carbohydrates, out var c) ? c : 0;
-        var totalFat = decimal.TryParse(aiRecipe.Nutrition.Fat, out var f) ? f : 0;
+        var recipeNutrition = await _nutritionService.GetNutritionAsync(aiRecipe.Title);
+
+        
 
        
-        int count = aiRecipe.Ingredients.Count;
-        decimal avgCalories = totalCalories / count;
-        decimal avgProtein = totalProtein / count;
-        decimal avgCarbs = totalCarbs / count;
-        decimal avgFat = totalFat / count;
+       
 
         var recipe = new Recipe
         {
             Title = aiRecipe.Title,
             Instructions = string.Join(". ", aiRecipe.Instructions),
             Description = $"AI generated {input.MealType} for {string.Join(", ", input.DietaryRestrictions)} diet",
-            Calories = totalCalories,
+            Calories = recipeNutrition?.Calories ?? 0, 
+            Protein= recipeNutrition?.Protein?? 0,
+            Carbs = recipeNutrition?.Carbohydrates ?? 0,
+            Fats = recipeNutrition?.Fat ?? 0,
             CuisineType = input.Cuisine,
             CreatedAt = DateTime.UtcNow,
 
@@ -224,20 +249,29 @@ public class RecipeManger : IRecipeManger
 
         foreach (var aiIng in aiRecipe.Ingredients)
         {
+            var nutrition = await _nutritionService.GetNutritionAsync(aiIng.Name);
+           
             var existing = await unitOfWork.IngredientRepository.FindByName(aiIng.Name);
             if (existing == null)
             {
                 existing = new Ingredient
                 {
                     Name = aiIng.Name,
-                    CaloriesPer100g = avgCalories,
-                    Protein = avgProtein,
-                    Carbs = avgCarbs,
-                    Fats = avgFat
+                    CaloriesPer100g = nutrition?.Calories??0,
+                    Protein = nutrition?.Protein ?? 0,
+                    Carbs = nutrition?.Carbohydrates ?? 0,
+                    Fats = nutrition?.Fat ?? 0
                 };
 
                 unitOfWork.IngredientRepository.Add(existing);
                 await unitOfWork.SaveChangesAsync();
+            }
+            else
+            {
+                existing.Protein = nutrition?.Protein ?? 0;
+                existing.CaloriesPer100g = nutrition?.Calories ?? 0;
+                existing.Carbs = nutrition?.Carbohydrates ?? 0;
+                existing.Fats = nutrition?.Fat ?? 0;
             }
 
             var (quantity, unit) = ParseQuantityAndUnit(aiIng.Quantity);
