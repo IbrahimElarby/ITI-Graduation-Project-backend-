@@ -223,7 +223,7 @@ public class RecipeManger : IRecipeManger
 
         // Parse total nutrition
         var recipeNutrition = await _nutritionService.GetNutritionAsync(aiRecipe.Title);
-
+        
         
 
        
@@ -237,7 +237,7 @@ public class RecipeManger : IRecipeManger
             Calories = recipeNutrition?.Calories ?? 0, 
             Protein= recipeNutrition?.Protein?? 0,
             Carbs = recipeNutrition?.Carbohydrates ?? 0,
-            Fats = recipeNutrition?.Fat ?? 0,
+            Fats = recipeNutrition?.TotalFat ?? 0,
             CuisineType = input.Cuisine,
             CreatedAt = DateTime.UtcNow,
 
@@ -260,7 +260,7 @@ public class RecipeManger : IRecipeManger
                     CaloriesPer100g = nutrition?.Calories??0,
                     Protein = nutrition?.Protein ?? 0,
                     Carbs = nutrition?.Carbohydrates ?? 0,
-                    Fats = nutrition?.Fat ?? 0
+                    Fats = nutrition?.TotalFat ?? 0
                 };
 
                 unitOfWork.IngredientRepository.Add(existing);
@@ -271,7 +271,7 @@ public class RecipeManger : IRecipeManger
                 existing.Protein = nutrition?.Protein ?? 0;
                 existing.CaloriesPer100g = nutrition?.Calories ?? 0;
                 existing.Carbs = nutrition?.Carbohydrates ?? 0;
-                existing.Fats = nutrition?.Fat ?? 0;
+                existing.Fats = nutrition?.TotalFat ?? 0;
             }
 
             var (quantity, unit) = ParseQuantityAndUnit(aiIng.Quantity);
@@ -280,14 +280,21 @@ public class RecipeManger : IRecipeManger
             {
                 IngredientID = existing.IngredientID,
                 Quantity = quantity,
-                Unit = unit
+                Unit = unit,
+                
             });
 
             ingredientDtos.Add(new RecipeIngredientDto
             {
                 IngredientName = existing.Name,
                 Quantity = quantity,
-                Unit = unit
+                Unit = unit,
+                CaloriesPer100g = existing.CaloriesPer100g,
+                IngredientID = existing.IngredientID,
+                Protein = existing.Protein,
+                carbs = existing.Carbs,
+                fats    = existing.Fats,
+                
             });
         }
 
@@ -304,11 +311,15 @@ public class RecipeManger : IRecipeManger
                 Description = recipe.Description,
                 Instructions = recipe.Instructions,
                 Calories = recipe.Calories,
+                Protein = recipe.Protein,
+                Carbs = recipe.Carbs,
+                Fats = recipe.Fats,
                 CreatedAt = recipe.CreatedAt,
                 CuisineType = recipe.CuisineType,
                 Ingredients = ingredientDtos
             }
         };
+
     }
 
 

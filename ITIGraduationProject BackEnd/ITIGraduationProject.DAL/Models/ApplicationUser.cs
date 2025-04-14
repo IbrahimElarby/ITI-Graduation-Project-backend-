@@ -13,6 +13,8 @@ namespace ITIGraduationProject.DAL
         public DateTime CreatedAt { get; set; }
         public DateTime? LastLogin { get; set; }
 
+        public string Image {  get; set; }
+
         public string? ProfileImageUrl { get; set; } 
         public string? Bio { get; set; } 
 

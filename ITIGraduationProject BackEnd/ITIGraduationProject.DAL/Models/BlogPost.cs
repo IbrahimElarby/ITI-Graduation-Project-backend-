@@ -13,6 +13,8 @@ namespace ITIGraduationProject.DAL
         public string? Content { get; set; } // HTML/Markdown content
         public string? FeaturedImageUrl { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string Image { get; set; }
+
 
         // Relationships
         public int AuthorID { get; set; }
