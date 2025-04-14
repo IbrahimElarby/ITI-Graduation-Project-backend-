@@ -1,6 +1,10 @@
-@ITIGraduationProject_HostAddress = http://localhost:5095
+@ITIGraduationProject_HostAddress = https://localhost:7157
 
 GET {{ITIGraduationProject_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+POST {{ITIGraduationProject_HostAddress}}/api/recipe/generate-ai?ingredients=string&diet=string&mealType=string
 
 ###

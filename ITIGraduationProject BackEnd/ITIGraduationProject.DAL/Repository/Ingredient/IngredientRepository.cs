@@ -18,5 +18,9 @@ namespace ITIGraduationProject.DAL
             return await context.Set<Ingredient>()
                 .FirstOrDefaultAsync(c => c.IngredientID == id);
         }
+        public async Task<Ingredient> FindByName(string name)
+        {
+            return await context.Set<Ingredient>().FirstOrDefaultAsync(i => i.Name.ToLower() == name.ToLower());
+        }
     }
 }

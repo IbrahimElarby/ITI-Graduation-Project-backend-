@@ -3,6 +3,8 @@ using ITIGraduationProject.DAL;
 using Microsoft.AspNetCore.Identity;
 using ITIGraduationProject.BL.DTO.RecipeManger.Output;
 using ITIGraduationProject.BL.DTO.RecipeManger.Read;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace ITIGraduationProject.BL.Manger;
 
@@ -10,11 +12,13 @@ public class RecipeManger : IRecipeManger
 {
     private readonly IUnitOfWork unitOfWork;
     private readonly UserManager<ApplicationUser> userManager;
+    private readonly ExternalRecipeService _externalRecipeService;
 
-    public RecipeManger(IUnitOfWork _unitOfWork, UserManager<ApplicationUser> _userManager)
+    public RecipeManger(IUnitOfWork _unitOfWork, UserManager<ApplicationUser> _userManager, ExternalRecipeService externalRecipeService)
     {
         unitOfWork = _unitOfWork;
         userManager = _userManager;
+        _externalRecipeService = externalRecipeService;
     }
 
     public async Task<GeneralResult> AddAsync(RecipeCreateDto item)
@@ -177,4 +181,126 @@ public class RecipeManger : IRecipeManger
         }).ToList() ?? new List<RatingDTO>()
 
     };
+
+    public async Task<GeneralResult<RecipeDetailsDTO>> ImportAndSaveRecipe(AiRecipeRequest input)
+    {
+        var aiRecipe = await _externalRecipeService.GenerateRecipeAsync(input);
+        if (aiRecipe == null)
+        {
+            return new GeneralResult<RecipeDetailsDTO>
+            {
+                Success = false,
+                Errors = [new ResultError { Code = "APIError", Message = "Failed to fetch recipe from AI API." }]
+            };
+        }
+
+        // Parse total nutrition
+        var totalCalories = aiRecipe.Nutrition.Calories;
+        var totalProtein = decimal.TryParse(aiRecipe.Nutrition.Protein, out var p) ? p : 0; ;
+        var totalCarbs = decimal.TryParse(aiRecipe.Nutrition.Carbohydrates, out var c) ? c : 0;
+        var totalFat = decimal.TryParse(aiRecipe.Nutrition.Fat, out var f) ? f : 0;
+
+       
+        int count = aiRecipe.Ingredients.Count;
+        decimal avgCalories = totalCalories / count;
+        decimal avgProtein = totalProtein / count;
+        decimal avgCarbs = totalCarbs / count;
+        decimal avgFat = totalFat / count;
+
+        var recipe = new Recipe
+        {
+            Title = aiRecipe.Title,
+            Instructions = string.Join(". ", aiRecipe.Instructions),
+            Description = $"AI generated {input.MealType} for {string.Join(", ", input.DietaryRestrictions)} diet",
+            Calories = totalCalories,
+            CuisineType = input.Cuisine,
+            CreatedAt = DateTime.UtcNow,
+
+            CreatedBy = 8, // TODO: Replace with current user ID
+            RecipeIngredients = new List<RecipeIngredient>()
+        };
+
+        var ingredientDtos = new List<RecipeIngredientDto>();
+
+        foreach (var aiIng in aiRecipe.Ingredients)
+        {
+            var existing = await unitOfWork.IngredientRepository.FindByName(aiIng.Name);
+            if (existing == null)
+            {
+                existing = new Ingredient
+                {
+                    Name = aiIng.Name,
+                    CaloriesPer100g = avgCalories,
+                    Protein = avgProtein,
+                    Carbs = avgCarbs,
+                    Fats = avgFat
+                };
+
+                unitOfWork.IngredientRepository.Add(existing);
+                await unitOfWork.SaveChangesAsync();
+            }
+
+            var (quantity, unit) = ParseQuantityAndUnit(aiIng.Quantity);
+
+            recipe.RecipeIngredients.Add(new RecipeIngredient
+            {
+                IngredientID = existing.IngredientID,
+                Quantity = quantity,
+                Unit = unit
+            });
+
+            ingredientDtos.Add(new RecipeIngredientDto
+            {
+                IngredientName = existing.Name,
+                Quantity = quantity,
+                Unit = unit
+            });
+        }
+
+        unitOfWork.RecipeRepository.Add(recipe);
+        await unitOfWork.SaveChangesAsync();
+
+        return new GeneralResult<RecipeDetailsDTO>
+        {
+            Success = true,
+            Data = new RecipeDetailsDTO
+            {
+                RecipeID = recipe.RecipeID,
+                Title = recipe.Title,
+                Description = recipe.Description,
+                Instructions = recipe.Instructions,
+                Calories = recipe.Calories,
+                CreatedAt = recipe.CreatedAt,
+                CuisineType = recipe.CuisineType,
+                Ingredients = ingredientDtos
+            }
+        };
+    }
+
+
+    private (decimal quantity, string unit) ParseQuantityAndUnit(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return (100, "g");
+
+        input = input.Trim().ToLower();
+
+        if (Regex.IsMatch(input, @"(to taste|some|few|pinch|as needed)"))
+            return (1, input); // fallback descriptive unit
+
+        var match = Regex.Match(input, @"(\d+(\.\d+)?)\s*(\w+)?");
+        if (match.Success)
+        {
+            decimal qty = decimal.TryParse(match.Groups[1].Value, out var q) ? q : 1;
+            string unit = match.Groups[3].Success ? match.Groups[3].Value : "unit";
+            return (qty, unit);
+        }
+
+        return (1, input); // final fallback
+    }
+
+
+
+
+
 }

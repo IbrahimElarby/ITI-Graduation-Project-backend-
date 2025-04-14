@@ -8,7 +8,7 @@ namespace ITIGraduationProject.DAL
 {
     public interface IIngredientRepository : IGenericRepository<Ingredient>
     {
-        
+       public Task<Ingredient> FindByName (string name); 
 
     }
 }

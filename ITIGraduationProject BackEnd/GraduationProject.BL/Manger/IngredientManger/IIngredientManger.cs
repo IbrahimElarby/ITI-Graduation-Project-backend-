@@ -4,13 +4,13 @@ namespace ITIGraduationProject.BL
 {
    public interface IIngredientManger
     {
-        public Task<List<IngredientDto>> GetAll();
+        public Task<List<RecipeIngredientDTO>> GetAll();
 
-        public Task<IngredientDto> GetById(int id);
+        public Task<RecipeIngredientDTO> GetById(int id);
 
-        public Task<GeneralResult> UpdateAsync(IngredientDto item);
+        public Task<GeneralResult> UpdateAsync(RecipeIngredientDTO item);
 
-        public Task<GeneralResult> AddAsync(IngredientDto item);
+        public Task<GeneralResult> AddAsync(RecipeIngredientDTO item);
 
         public Task<GeneralResult> DeleteAsync(int id);
     }

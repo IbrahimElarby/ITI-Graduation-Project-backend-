@@ -5,7 +5,7 @@
 namespace ITIGraduationProject.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class seeding : Migration
+    public partial class addcalories : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,6 +19,13 @@ namespace ITIGraduationProject.DAL.Migrations
                 oldClrType: typeof(string),
                 oldType: "nvarchar(255)",
                 oldMaxLength: 255);
+
+            migrationBuilder.AddColumn<decimal>(
+                name: "Calories",
+                table: "Recipes",
+                type: "decimal(18,2)",
+                nullable: false,
+                defaultValue: 0m);
 
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
@@ -56,6 +63,10 @@ namespace ITIGraduationProject.DAL.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropColumn(
+                name: "Calories",
+                table: "Recipes");
+
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
                 table: "RestaurantMeals",

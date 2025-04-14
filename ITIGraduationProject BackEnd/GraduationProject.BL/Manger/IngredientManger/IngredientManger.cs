@@ -19,14 +19,14 @@ namespace ITIGraduationProject.BL
         {
             unitOfWork = _unitOfWork;
         }
-        public async Task<List<IngredientDto>> GetAll()
+        public async Task<List<RecipeIngredientDTO>> GetAll()
         {
             var ingredients = await unitOfWork.IngredientRepository.GetAll();
             if (ingredients == null)
             {
                 return null;
             }
-            return ingredients.Select(i => new IngredientDto
+            return ingredients.Select(i => new RecipeIngredientDTO
             {
                 IngredientID = i.IngredientID,
                 Name = i.Name,
@@ -37,14 +37,14 @@ namespace ITIGraduationProject.BL
             }).ToList();
         }
 
-        public async Task<IngredientDto> GetById(int id)
+        public async Task<RecipeIngredientDTO> GetById(int id)
         {
             var ingredient = await unitOfWork.IngredientRepository.GetByIdAsync(id);
             if (ingredient == null)
             {
                 return null;
             }
-            return new IngredientDto
+            return new RecipeIngredientDTO
             {
                 IngredientID = ingredient.IngredientID,
                 Name = ingredient.Name,
@@ -54,7 +54,7 @@ namespace ITIGraduationProject.BL
                 Protein = ingredient.Protein,
             };
         }
-        public async Task<GeneralResult> AddAsync(IngredientDto item)
+        public async Task<GeneralResult> AddAsync(RecipeIngredientDTO item)
         {
             try
             {
@@ -157,7 +157,7 @@ namespace ITIGraduationProject.BL
         }
 
 
-        public async Task<GeneralResult> UpdateAsync(IngredientDto item)
+        public async Task<GeneralResult> UpdateAsync(RecipeIngredientDTO item)
         {
             try
             { 

@@ -14,6 +14,8 @@ namespace ITIGraduationProject.BL.DTO.RecipeManger.Output
         public string Title { get; set; } = string.Empty;
         public string Instructions { get; set; } = string.Empty;
         public int PrepTime { get; set; }
+
+        public decimal Calories { get; set; }
         public string Description { get; set; } = string.Empty;
         public int CookingTime { get; set; }
         public string CuisineType { get; set; } = string.Empty;
