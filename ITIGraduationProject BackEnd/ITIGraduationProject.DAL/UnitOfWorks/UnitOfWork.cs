@@ -25,7 +25,7 @@ namespace ITIGraduationProject.DAL
 
         public IRecipeCategoryRepository RecipeCategoryRepository { get; }
 
-
+        public IFavoriteRecipeRepository FavoriteRecipeRepository { get; }
         public UnitOfWork(
             ApplicationDbContext cookingContext,
             IPostBlogRepository _PostBlogRepository,
@@ -33,7 +33,8 @@ namespace ITIGraduationProject.DAL
             ICategoryRepository categoryRepository,
             IIngredientRepository ingredientRepository,
             IBlogPostCategoryRepository _blogPostCategoryRepository,
-            IRecipeCategoryRepository _RecipeCategoryRepository
+            IRecipeCategoryRepository _RecipeCategoryRepository,
+            IFavoriteRecipeRepository _FavoriteRecipeRepository
             )
         {
             context = cookingContext;
@@ -43,6 +44,7 @@ namespace ITIGraduationProject.DAL
             IngredientRepository = ingredientRepository;
             PostCategoryRepository = _blogPostCategoryRepository;
             RecipeCategoryRepository = _RecipeCategoryRepository;
+            FavoriteRecipeRepository = _FavoriteRecipeRepository;
         }
 
 

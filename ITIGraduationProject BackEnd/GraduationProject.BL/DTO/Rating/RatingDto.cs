@@ -8,7 +8,9 @@ namespace ITIGraduationProject.BL.DTO
 {
     public class RatingDto
     {
-        public int Score { get; set; } 
+        public decimal Score { get; set; } 
         public int RecipeId { get; set; }
+
+        public int UserId { get; set; }
     }
 }
