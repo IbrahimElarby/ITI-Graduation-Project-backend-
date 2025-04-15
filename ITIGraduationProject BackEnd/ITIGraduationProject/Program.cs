@@ -4,6 +4,7 @@ using ITIGraduationProject.BL.DTO;
 using ITIGraduationProject.BL.Manger.SubscriptionManger;
 using ITIGraduationProject.DAL;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Stripe;
 using System.Security.Claims;
@@ -32,7 +33,9 @@ namespace ITIGraduationProject
 
                 options.User.RequireUniqueEmail = true;
             })
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
