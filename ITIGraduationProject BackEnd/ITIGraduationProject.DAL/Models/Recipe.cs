@@ -31,6 +31,8 @@ namespace ITIGraduationProject.DAL
         public ICollection<RecipeIngredient>? RecipeIngredients { get; set; }
         public ICollection<Rating>? Ratings { get; set; }
         public ICollection<Comment>? Comments { get; set; } 
-        public ICollection<RecipeCategory>? Categories { get; set; } 
+        public ICollection<RecipeCategory>? Categories { get; set; }
+
+        public ICollection<FavoriteRecipe> FavoritedBy { get; set; }
     }
 }
