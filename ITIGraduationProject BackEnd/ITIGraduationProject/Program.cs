@@ -1,5 +1,6 @@
 using BugProject;
 using ITIGraduationProject.BL;
+using ITIGraduationProject.BL.DTO;
 using ITIGraduationProject.BL.Manger.SubscriptionManger;
 using ITIGraduationProject.DAL;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -18,6 +19,7 @@ namespace ITIGraduationProject
             // Add services to the container.
             builder.Services.AddDataAccessServices(builder.Configuration);
             builder.Services.AddBusinessServices();
+            builder.Services.Configure<MailSettingsDto>(builder.Configuration.GetSection("MailSettings"));
             builder.Services.AddIdentityCore<ApplicationUser>(options =>
             {
                 // Validation to be read from configurations

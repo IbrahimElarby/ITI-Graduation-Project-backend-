@@ -1,7 +1,9 @@
 ﻿
 using FluentValidation;
+using ITIGraduationProject.BL.DTO;
 using ITIGraduationProject.BL.Manger;
 using ITIGraduationProject.BL.Manger.CategoryManger;
+using ITIGraduationProject.BL.Manger.MailServiceManger;
 using ITIGraduationProject.BL.Manger.SubscriptionManger;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -30,6 +32,8 @@ namespace ITIGraduationProject.BL
             services.AddScoped<IRecipeCategoryManger, RecipeCategoryManger>();
             services.AddHttpClient<ExternalRecipeService>();
             services.AddHttpClient<NutritionService>();
+         
+            services.AddScoped<IEMailService, EMailService>();
 
 
 
