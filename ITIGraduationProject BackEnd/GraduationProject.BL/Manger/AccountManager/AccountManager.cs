@@ -43,7 +43,7 @@ namespace ITIGraduationProject.BL.Manger
             {
                 // Generate confirmation token
                 var token = await _accountRepository.GenerateEmailConfirmationTokenAsync(user);
-                var encodedToken = System.Web.HttpUtility.UrlEncode(token);
+                 var encodedToken = System.Net.WebUtility.UrlEncode(token);
 
                 // Confirmation URL
                 var confirmationUrl = $"https://localhost:7157/api/Account/ConfirmEmail?userId={user.Id}&token={encodedToken}";
