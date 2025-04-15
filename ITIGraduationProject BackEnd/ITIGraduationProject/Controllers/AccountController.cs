@@ -70,7 +70,8 @@ namespace ITIGraduationProject.Controllers
             var user = await _accountManager.GetUserByIdAsync(userId);
             if (user == null) return BadRequest("User not found");
 
-            var decodedToken = System.Web.HttpUtility.UrlDecode(token);
+             var decodedToken = System.Net.WebUtility.UrlDecode(token)
+
 
             var result = await _accountManager.ConfirmEmailAsync(user, decodedToken);
             if (result.Succeeded)
