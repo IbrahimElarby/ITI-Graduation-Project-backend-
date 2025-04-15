@@ -31,6 +31,7 @@ namespace ITIGraduationProject.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<RecipeCategory> RecipeCategories { get; set; }
         public DbSet<BlogPostCategory> BlogPostCategories { get; set; }
+        public DbSet<FavoriteRecipe> FavoriteRecipes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

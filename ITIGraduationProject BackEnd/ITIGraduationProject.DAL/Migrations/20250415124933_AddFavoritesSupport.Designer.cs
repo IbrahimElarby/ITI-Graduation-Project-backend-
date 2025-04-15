@@ -4,6 +4,7 @@ using ITIGraduationProject.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ITIGraduationProject.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250415124933_AddFavoritesSupport")]
+    partial class AddFavoritesSupport
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,7 +225,7 @@ namespace ITIGraduationProject.DAL.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("FavoriteRecipes");
+                    b.ToTable("FavoriteRecipe");
                 });
 
             modelBuilder.Entity("ITIGraduationProject.DAL.Ingredient", b =>

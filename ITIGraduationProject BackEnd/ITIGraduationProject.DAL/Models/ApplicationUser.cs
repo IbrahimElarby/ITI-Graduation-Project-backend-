@@ -13,12 +13,13 @@ namespace ITIGraduationProject.DAL
         public DateTime CreatedAt { get; set; }
         public DateTime? LastLogin { get; set; }
 
-        public string Image {  get; set; }
+       
 
         public string? ProfileImageUrl { get; set; } 
-        public string? Bio { get; set; } 
+        public string? Bio { get; set; }
 
         // Navigation properties
+        public ICollection<FavoriteRecipe> FavoriteRecipes { get; set; }
         public ICollection<Recipe>? Recipes { get; set; }
         public ICollection<Rating>? Ratings { get; set; }
         public ICollection<Order>? Orders { get; set; }
