@@ -23,6 +23,7 @@ namespace ITIGraduationProject.DAL
         public decimal Fats { get; set; }
         public string Image { get; set; }
 
+        public decimal AvgRating { get; set; }
         public DateTime CreatedAt { get; set; }
 
         // Relationships

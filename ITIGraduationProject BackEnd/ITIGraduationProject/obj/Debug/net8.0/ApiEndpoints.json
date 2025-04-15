@@ -561,6 +561,37 @@
   },
   {
     "ContainingType": "ITIGraduationProject.Controllers.RecipeController",
+    "Method": "RemoveFavorite",
+    "RelativePath": "api/Recipe/{userId}/{recipeId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ITIGraduationProject.BL.GeneralResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ITIGraduationProject.Controllers.RecipeController",
     "Method": "GetByCategory",
     "RelativePath": "api/Recipe/category/{id}",
     "HttpMethod": "GET",
@@ -576,6 +607,67 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[ITIGraduationProject.BL.DTO.RecipeManger.Output.RecipeDetailsDTO, ITIGraduationProject.BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ITIGraduationProject.Controllers.RecipeController",
+    "Method": "AddToFavorites",
+    "RelativePath": "api/Recipe/favorite",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ITIGraduationProject.BL.FavoriteRecipeCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ITIGraduationProject.BL.GeneralResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ITIGraduationProject.BL.GeneralResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "ITIGraduationProject.Controllers.RecipeController",
+    "Method": "GetFavorites",
+    "RelativePath": "api/Recipe/favoriteRecipesUser/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ITIGraduationProject.BL.GeneralResult\u00601[[System.Collections.Generic.List\u00601[[ITIGraduationProject.BL.FavoriteRecipeDto, ITIGraduationProject.BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

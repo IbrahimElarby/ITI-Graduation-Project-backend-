@@ -13,7 +13,7 @@ namespace ITIGraduationProject.DAL
         public Recipe? Recipe { get; set; }
         public int UserID { get; set; }
         public ApplicationUser? User { get; set; }
-        public int Score { get; set; }
+        public decimal Score { get; set; }
         public DateTime CreatedAt { get; set; }
     }
 }

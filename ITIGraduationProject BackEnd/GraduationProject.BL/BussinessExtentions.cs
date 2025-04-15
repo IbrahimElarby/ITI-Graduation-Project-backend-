@@ -32,7 +32,7 @@ namespace ITIGraduationProject.BL
             services.AddScoped<IRecipeCategoryManger, RecipeCategoryManger>();
             services.AddHttpClient<ExternalRecipeService>();
             services.AddHttpClient<NutritionService>();
-         
+         services.AddScoped<IFavoriteRecipeManger,FavoriteRecipeManager>();
             services.AddScoped<IEMailService, EMailService>();
 
 

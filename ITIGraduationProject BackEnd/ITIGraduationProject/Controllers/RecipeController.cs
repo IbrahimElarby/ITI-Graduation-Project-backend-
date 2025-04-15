@@ -2,6 +2,7 @@
 using ITIGraduationProject.BL.DTO.RecipeManger.Input;
 using ITIGraduationProject.BL.DTO.RecipeManger.Output;
 using ITIGraduationProject.BL.Manger;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,9 +13,12 @@ namespace ITIGraduationProject.Controllers
     public class RecipeController : ControllerBase
     {
         private readonly IRecipeManger recipeManager;
-        public RecipeController(IRecipeManger _recipeManger)
+        private readonly IFavoriteRecipeManger favoriteRecipeManger;
+
+        public RecipeController(IRecipeManger _recipeManger , IFavoriteRecipeManger _favoriteRecipeManger)
         {
             recipeManager = _recipeManger;
+            favoriteRecipeManger = _favoriteRecipeManger;
         }
 
         [HttpGet]
@@ -88,5 +92,38 @@ namespace ITIGraduationProject.Controllers
             return Ok(result);
         }
 
+        [HttpPost("favorite")]
+        [ProducesResponseType(typeof(GeneralResult), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(GeneralResult), StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> AddToFavorites([FromBody] FavoriteRecipeCreateDto dto)
+        {
+            var result = await favoriteRecipeManger.AddToFavoritesAsync(dto);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        [HttpGet("favoriteRecipesUser/{userId}")]
+        
+        public async Task<ActionResult<GeneralResult<List<FavoriteRecipeDto>>>> GetFavorites(int userId)
+        {
+            var result = await favoriteRecipeManger.GetFavoritesForUser(userId);
+            return Ok(result);
+        }
+
+
+        [HttpDelete("{userId}/{recipeId}")]
+        
+        public async Task<ActionResult<GeneralResult>> RemoveFavorite(int userId, int recipeId)
+        {
+            var result = await favoriteRecipeManger.RemoveFromFavoritesAsync(userId, recipeId);
+            if (!result.Success)
+                return NotFound(result);
+
+            return Ok(result);
+        }
     }
+
 }
