@@ -64,5 +64,44 @@ namespace ITIGraduationProject.Controllers
             }
             return BadRequest(ModelState);
         }
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            var user = await _accountManager.GetUserByIdAsync(userId);
+            if (user == null) return BadRequest("User not found");
+
+            var decodedToken = System.Web.HttpUtility.UrlDecode(token);
+
+            var result = await _accountManager.ConfirmEmailAsync(user, decodedToken);
+            if (result.Succeeded)
+            {
+                return Ok("Email confirmed successfully");
+            }
+
+            return BadRequest("Invalid token or confirmation failed");
+        }
+
+        [HttpPost("SendPasswordResetEmail")]
+        public async Task<IActionResult> SendPasswordResetEmail([FromBody] string email)
+        {
+            var result = await _accountManager.SendPasswordResetEmailAsync(email);
+            if (!result)
+            {
+                return BadRequest("Email not found");
+            }
+            return Ok("Password reset link sent");
+        }
+
+
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword([FromBody] PasswordResetDto resetDto)
+        {
+            var result = await _accountManager.ResetPasswordAsync(resetDto.Email, resetDto.Token, resetDto.NewPassword);
+            if (!result.Succeeded)
+            {
+                return BadRequest("Failed to reset password");
+            }
+            return Ok("Password reset successfully");
+        }
     }
 }

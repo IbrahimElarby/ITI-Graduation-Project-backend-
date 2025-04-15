@@ -11,18 +11,23 @@ using ITIGraduationProject.DAL;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using ITIGraduationProject.BL.Manger.MailServiceManger;
 
 namespace ITIGraduationProject.BL.Manger
 {
+
     public class AccountManager : IAccountManager
     {
         private readonly IAccountRepository _accountRepository;
         private readonly IConfiguration _config;
+        private readonly IEMailService _mailService;
 
-        public AccountManager(IAccountRepository accountRepository, IConfiguration config)
+
+        public AccountManager(IAccountRepository accountRepository, IConfiguration config, IEMailService mailService)
         {
             _accountRepository = accountRepository;
             _config = config;
+            _mailService = mailService;
         }
 
         public async Task<IdentityResult> RegisterAsync(RegisterDto registerDto)
@@ -32,7 +37,61 @@ namespace ITIGraduationProject.BL.Manger
                 UserName = registerDto.UserName,
                 Email = registerDto.Email
             };
-            return await _accountRepository.RegisterUserAsync(user, registerDto.Password);
+            var result = await _accountRepository.RegisterUserAsync(user, registerDto.Password);
+
+            if (result.Succeeded)
+            {
+                // Generate confirmation token
+                var token = await _accountRepository.GenerateEmailConfirmationTokenAsync(user);
+                var encodedToken = System.Web.HttpUtility.UrlEncode(token);
+
+                // Confirmation URL
+                var confirmationUrl = $"https://localhost:7157/api/Account/ConfirmEmail?userId={user.Id}&token={encodedToken}";
+
+                // Send confirmation email
+                await _mailService.SendEmailAsync(registerDto.Email, "Confirm Your Account",
+                    $"<h2>Welcome {registerDto.UserName} and thank " +
+                    $"you for joining our cook&crave </h2><p>Thank you for registering." +
+                    $" Please confirm your email by clicking " +
+                    $"<a href='{confirmationUrl}'>here</a>.</p>");
+            }
+
+            return result;
+
+        }
+        public Task<ApplicationUser> GetUserByIdAsync(string userId)
+        {
+            return _accountRepository.GetUserByIdAsync(userId);
+        }
+
+        public Task<IdentityResult> ConfirmEmailAsync(ApplicationUser user, string token)
+        {
+            return _accountRepository.ConfirmEmailAsync(user, token);
+        }
+        public async Task<bool> SendPasswordResetEmailAsync(string email)
+        {
+            var user = await _accountRepository.GetUserByEmailAsync(email);
+            if (user == null) return false;
+
+            var token = await _accountRepository.GeneratePasswordResetTokenAsync(user);
+            var encodedToken = System.Web.HttpUtility.UrlEncode(token);
+
+            var resetUrl = $"https://localhost:7157/api/Account/ResetPassword?email={email}&token={encodedToken}";
+
+            await _mailService.SendEmailAsync(email, "Reset Your Password",
+                $"<h2>Welcome {user.UserName}" +
+                $"<h2>Forgot your password?</h2><p>Please reset your password by clicking " +
+                $"<a href='{resetUrl}'>here</a> to Join again cook&crave </p>");
+
+            return true;
+        }
+
+        public async Task<IdentityResult> ResetPasswordAsync(string email, string token, string newPassword)
+        {
+            var user = await _accountRepository.GetUserByNameAsync(email);
+            if (user == null) return IdentityResult.Failed(new IdentityError { Description = "User not found" });
+
+            return await _accountRepository.ResetPasswordAsync(user, token, newPassword);
         }
 
         public async Task<string> LoginAsync(LoginDto loginDto)
@@ -46,7 +105,7 @@ namespace ITIGraduationProject.BL.Manger
                  new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                  new Claim(ClaimTypes.NameIdentifier, userFromDb.Id.ToString()),
                  new Claim(ClaimTypes.Name, userFromDb.UserName)
-                 
+
                 };
                 var userRoles = await _accountRepository.GetUserRolesAsync(userFromDb);
                 foreach (var role in userRoles)
