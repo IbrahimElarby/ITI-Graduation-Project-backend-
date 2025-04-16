@@ -1,4 +1,4 @@
-﻿using ITIGraduationProject.BL.DTO;
+﻿using ITIGraduationProject.BL;
 using ITIGraduationProject.DAL;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
@@ -11,48 +11,54 @@ namespace ITIGraduationProject.Controllers
     [ApiController]
     public class CommentsController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ICommentManger _commentManager;
 
-        public CommentsController(ApplicationDbContext context)
+        public CommentsController(ICommentManger commentManager)
         {
-            _context = context;
+            _commentManager = commentManager;
         }
-        [HttpPost("comments")]
-        public async Task<IActionResult> CreateComment([FromBody] CommentDto commentDto)
+
+        [HttpPost]
+        public async Task<IActionResult> AddComment([FromBody] CommentDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            
 
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
-            var recipe = await _context.Recipes.FindAsync(commentDto.RecipeId);
+            var result = await _commentManager.AddCommentAsync(dto);
+            if (!result.Success)
+                return BadRequest(result);
 
-            if (recipe == null)
-                return NotFound("Recipe not found");
-
-            var comment = new Comment
-            {
-                Text = commentDto.Content,
-                UserID = int.Parse(userId),
-                RecipeID = commentDto.RecipeId
-            };
-
-            _context.Comments.Add(comment);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetCommentsByRecipe), new { recipeId = comment.RecipeID }, comment);
+            return Ok(result);
         }
-        [HttpGet("recipes/{id}/comments")]
-        public async Task<IActionResult> GetCommentsByRecipe(int id)
+
+        [HttpGet("recipe/{recipeId}")]
+        public async Task<IActionResult> GetCommentsForRecipe(int recipeId)
         {
-            var recipe = await _context.Recipes.FindAsync(id);
-            if (recipe == null)
-                return NotFound("Recipe not found");
+            var result = await _commentManager.GetCommentsForRecipeAsync(recipeId);
+            return Ok(result);
+        }
 
-            var comments = await _context.Comments
-                .Where(c => c.RecipeID == id)
-                .ToListAsync();
+        [HttpPut("{commentId}")]
+        public async Task<IActionResult> UpdateComment(int commentId, [FromBody] CommentDto dto)
+        {
+          
 
-            return Ok(comments);
+            var result = await _commentManager.UpdateCommentAsync(commentId, dto.Content, dto.UserId);
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+        [HttpDelete("{commentId}")]
+        public async Task<IActionResult> DeleteComment(int commentId, [FromBody] CommentDto dto)
+        {
+           
+
+            var result = await _commentManager.DeleteCommentAsync(commentId, dto.UserId);
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
         }
     }
 }

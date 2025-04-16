@@ -35,6 +35,7 @@ namespace ITIGraduationProject.BL
          services.AddScoped<IFavoriteRecipeManger,FavoriteRecipeManager>();
             services.AddScoped<IEMailService, EMailService>();
             services.AddScoped<IRatingManger, RatingManger>();
+            services.AddScoped<ICommentManger, CommentManger>();
 
 
 
