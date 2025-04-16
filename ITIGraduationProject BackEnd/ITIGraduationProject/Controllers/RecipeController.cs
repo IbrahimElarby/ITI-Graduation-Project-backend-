@@ -124,6 +124,12 @@ namespace ITIGraduationProject.Controllers
 
             return Ok(result);
         }
+        [HttpGet("top-rated")]
+        public async Task<ActionResult<GeneralResult<List<RecipeDetailsDTO>>>> GetTopRatedRecipes()
+        {
+            var topRecipes = await recipeManager.GetTopRatedRecipes();
+            return Ok(topRecipes);
+        }
     }
 
 }

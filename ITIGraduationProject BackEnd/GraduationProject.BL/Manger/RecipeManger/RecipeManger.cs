@@ -5,6 +5,7 @@ using ITIGraduationProject.BL.DTO.RecipeManger.Output;
 using ITIGraduationProject.BL.DTO.RecipeManger.Read;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using Microsoft.EntityFrameworkCore;
 
 namespace ITIGraduationProject.BL.Manger;
 
@@ -15,7 +16,7 @@ public class RecipeManger : IRecipeManger
     private readonly ExternalRecipeService _externalRecipeService;
     private readonly NutritionService _nutritionService;
 
-    public RecipeManger(IUnitOfWork _unitOfWork, UserManager<ApplicationUser> _userManager, ExternalRecipeService externalRecipeService , NutritionService nutritionService)
+    public RecipeManger(IUnitOfWork _unitOfWork, UserManager<ApplicationUser> _userManager, ExternalRecipeService externalRecipeService, NutritionService nutritionService)
     {
         unitOfWork = _unitOfWork;
         userManager = _userManager;
@@ -192,7 +193,7 @@ public class RecipeManger : IRecipeManger
             Ratings = recipe.Ratings?.Select(r => new RatingDTO
             {
                 Score = r.Score,
-                
+
             }).ToList() ?? new List<RatingDTO>(),
 
             Comments = recipe.Comments?.Select(c => new CommentNestedDTO
@@ -200,8 +201,8 @@ public class RecipeManger : IRecipeManger
                 CommentID = c.CommentID,
                 Content = c.Text,
                 CreatedAt = c.CreatedAt,
-                
-                
+
+
             }).ToList() ?? new List<CommentNestedDTO>(),
 
             CategoryNames = recipe.Categories?.Select(rc => rc.Category?.Name).ToList() ?? new List<string>()
@@ -223,19 +224,19 @@ public class RecipeManger : IRecipeManger
 
         // Parse total nutrition
         var recipeNutrition = await _nutritionService.GetNutritionAsync(aiRecipe.Title);
-        
-        
 
-       
-       
+
+
+
+
 
         var recipe = new Recipe
         {
             Title = aiRecipe.Title,
             Instructions = string.Join(". ", aiRecipe.Instructions),
             Description = $"AI generated {input.MealType} for {string.Join(", ", input.DietaryRestrictions)} diet",
-            Calories = recipeNutrition?.Calories ?? 0, 
-            Protein= recipeNutrition?.Protein?? 0,
+            Calories = recipeNutrition?.Calories ?? 0,
+            Protein = recipeNutrition?.Protein ?? 0,
             Carbs = recipeNutrition?.Carbohydrates ?? 0,
             Fats = recipeNutrition?.TotalFat ?? 0,
             CuisineType = input.Cuisine,
@@ -250,14 +251,14 @@ public class RecipeManger : IRecipeManger
         foreach (var aiIng in aiRecipe.Ingredients)
         {
             var nutrition = await _nutritionService.GetNutritionAsync(aiIng.Name);
-           
+
             var existing = await unitOfWork.IngredientRepository.FindByName(aiIng.Name);
             if (existing == null)
             {
                 existing = new Ingredient
                 {
                     Name = aiIng.Name,
-                    CaloriesPer100g = nutrition?.Calories??0,
+                    CaloriesPer100g = nutrition?.Calories ?? 0,
                     Protein = nutrition?.Protein ?? 0,
                     Carbs = nutrition?.Carbohydrates ?? 0,
                     Fats = nutrition?.TotalFat ?? 0
@@ -281,7 +282,7 @@ public class RecipeManger : IRecipeManger
                 IngredientID = existing.IngredientID,
                 Quantity = quantity,
                 Unit = unit,
-                
+
             });
 
             ingredientDtos.Add(new RecipeIngredientDto
@@ -293,8 +294,8 @@ public class RecipeManger : IRecipeManger
                 IngredientID = existing.IngredientID,
                 Protein = existing.Protein,
                 carbs = existing.Carbs,
-                fats    = existing.Fats,
-                
+                fats = existing.Fats,
+
             });
         }
 
@@ -344,8 +345,9 @@ public class RecipeManger : IRecipeManger
         return (1, input); // final fallback
     }
 
-
-
-
-
+    public async Task<List<RecipeDetailsDTO>> GetTopRatedRecipes(int count = 10)
+    {
+        var topRecipes = await unitOfWork.RecipeRepository.GetTopRatedRecipes(count);
+        return topRecipes.Select(ToRecipeDetailsDTO).ToList();
+    }
 }

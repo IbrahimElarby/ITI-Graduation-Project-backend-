@@ -739,6 +739,26 @@
     ]
   },
   {
+    "ContainingType": "ITIGraduationProject.Controllers.RecipeController",
+    "Method": "GetTopRatedRecipes",
+    "RelativePath": "api/Recipe/top-rated",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ITIGraduationProject.BL.GeneralResult\u00601[[System.Collections.Generic.List\u00601[[ITIGraduationProject.BL.DTO.RecipeManger.Output.RecipeDetailsDTO, ITIGraduationProject.BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "ITIGraduationProject.RecipeCategoryController",
     "Method": "AssignCategory",
     "RelativePath": "api/recipes/{recipeId}/categories/{categoryId}",

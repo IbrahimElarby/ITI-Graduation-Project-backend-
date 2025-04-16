@@ -10,5 +10,6 @@ namespace ITIGraduationProject.DAL.Repository
     {
         Task<List<Recipe>> GetByCategory(int id);
         Task<List<Recipe>> GetByTitle(string title);
+        Task<List<Recipe>> GetTopRatedRecipes(int count = 10);
     }
 }

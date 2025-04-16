@@ -31,7 +31,7 @@ namespace ITIGraduationProject.DAL.Repository
             return await cookingContext.Set<Recipe>()
                 .Include(r => r.Creator)
                 .Include(r => r.RecipeIngredients)
-                .ThenInclude(ri=> ri.Ingredient)
+                .ThenInclude(ri => ri.Ingredient)
                 .Include(r => r.Ratings)
                 .Include(r => r.Comments)
                 .Include(r => r.Categories)
@@ -42,7 +42,7 @@ namespace ITIGraduationProject.DAL.Repository
                 .ToListAsync();
         }
 
-        public  async Task<List<Recipe>> GetByTitle(string title)
+        public async Task<List<Recipe>> GetByTitle(string title)
         {
             return await cookingContext.Recipes
                 .Include(r => r.Creator)
@@ -56,5 +56,23 @@ namespace ITIGraduationProject.DAL.Repository
                 .Where(r => r.Title.Contains(title))
                 .ToListAsync();
         }
+
+        public async Task<List<Recipe>> GetTopRatedRecipes(int count = 10)
+        {
+            return await cookingContext.Recipes
+            .Include(r => r.Creator)
+            .Include(r => r.RecipeIngredients)
+                .ThenInclude(ri => ri.Ingredient)
+            .Include(r => r.Ratings)
+            .Include(r => r.Comments)
+            .Include(r => r.Categories)
+                .ThenInclude(rc => rc.Category)
+            .Where(r => r.Ratings.Any())
+            .OrderByDescending(r => r.Ratings.Average(rt => rt.Score))
+            .Take(count)
+            .AsNoTracking()
+            .AsSplitQuery()
+            .ToListAsync();
+            }
     }
 }

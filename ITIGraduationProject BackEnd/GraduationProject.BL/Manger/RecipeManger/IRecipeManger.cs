@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ITIGraduationProject.BL.DTO.RecipeManger.Output;
+using ITIGraduationProject.BL.DTO.RecipeManger.Read;
 
 namespace ITIGraduationProject.BL.Manger
 {
@@ -19,5 +20,6 @@ namespace ITIGraduationProject.BL.Manger
         public Task<GeneralResult> DeleteAsync(int id);
         public Task<GeneralResult<RecipeDetailsDTO>> ImportAndSaveRecipe(AiRecipeRequest input);
 
+        public Task<List<RecipeDetailsDTO>> GetTopRatedRecipes(int count = 10);
     }
 }
