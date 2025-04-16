@@ -157,10 +157,18 @@ namespace ITIGraduationProject.BL
                     foreach (var categoryname in item.CategoryNames)
                     {
                         var category = await unitOfWork.CategoryRepository.GetByName(categoryname);
-                        if (category != null)
+                        if (category == null)
                         {
-                            post.Categories.Add(new BlogPostCategory { Category = category });
+                            category = new Category { Name = categoryname };
+                            unitOfWork.CategoryRepository.Add(category);
+                            await unitOfWork.SaveChangesAsync(); // Save it to get the CategoryID
                         }
+
+                        post.Categories.Add(new BlogPostCategory
+                        {
+                            CategoryID = category.CategoryID,
+                            Category = category
+                        });
                     }
                 }
                 
@@ -232,10 +240,18 @@ namespace ITIGraduationProject.BL
                     foreach (var categoryName in item.CategoryNames)
                     {
                         var category = await unitOfWork.CategoryRepository.GetByName(categoryName);
-                        if (category != null)
+                        if (category == null)
                         {
-                            post.Categories.Add(new BlogPostCategory { Category = category });
+                            category = new Category { Name = categoryName };
+                            unitOfWork.CategoryRepository.Add(category);
+                            await unitOfWork.SaveChangesAsync(); // Save it to get the CategoryID
                         }
+
+                        post.Categories.Add(new BlogPostCategory
+                        {
+                            CategoryID = category.CategoryID,
+                            Category = category
+                        });
                     }
                 }
 

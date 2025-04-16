@@ -129,7 +129,6 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -243,7 +242,6 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -413,7 +411,6 @@ namespace ITIGraduationProject.DAL.Migrations
                         .HasColumnType("decimal(10,2)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Instructions")
