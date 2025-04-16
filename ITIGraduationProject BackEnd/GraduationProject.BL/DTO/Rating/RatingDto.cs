@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ITIGraduationProject.BL.DTO
+namespace ITIGraduationProject.BL
 {
     public class RatingDto
     {
