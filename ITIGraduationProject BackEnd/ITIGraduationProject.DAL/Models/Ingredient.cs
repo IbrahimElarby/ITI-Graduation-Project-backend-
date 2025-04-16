@@ -14,7 +14,7 @@ namespace ITIGraduationProject.DAL
         public decimal Protein { get; set; }
         public decimal Carbs { get; set; }
         public decimal Fats { get; set; }
-        public string Image { get; set; }
+        public string? Image { get; set; }
 
 
         public ICollection<RecipeIngredient>? RecipeIngredients { get; set; }

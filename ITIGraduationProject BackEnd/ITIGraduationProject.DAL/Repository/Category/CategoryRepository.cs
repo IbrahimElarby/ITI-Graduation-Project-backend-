@@ -35,7 +35,7 @@ namespace ITIGraduationProject.DAL
           .Include(c => c.Recipes)
               .ThenInclude(rc => rc.Recipe)
                   .ThenInclude(r => r.Comments)
-          .AsNoTracking()
+          
              .AsSplitQuery()
             .FirstOrDefaultAsync(c => c.Name == name);
 
