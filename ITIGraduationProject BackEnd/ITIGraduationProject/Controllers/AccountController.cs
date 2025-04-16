@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using ITIGraduationProject.BL.DTO.Account;
 
 namespace ITIGraduationProject.Controllers
 {
@@ -70,7 +71,7 @@ namespace ITIGraduationProject.Controllers
             var user = await _accountManager.GetUserByIdAsync(userId);
             if (user == null) return BadRequest("User not found");
 
-             var decodedToken = System.Net.WebUtility.UrlDecode(token)
+            var decodedToken = System.Net.WebUtility.UrlDecode(token);
 
 
             var result = await _accountManager.ConfirmEmailAsync(user, decodedToken);
@@ -93,7 +94,6 @@ namespace ITIGraduationProject.Controllers
             return Ok("Password reset link sent");
         }
 
-
         [HttpPost("ResetPassword")]
         public async Task<IActionResult> ResetPassword([FromBody] PasswordResetDto resetDto)
         {
@@ -104,5 +104,54 @@ namespace ITIGraduationProject.Controllers
             }
             return Ok("Password reset successfully");
         }
+        [HttpPut("update-profile/{id}")]
+        public async Task<IActionResult> UpdateProfile(int id, [FromBody] UserDto updatedUser)
+        {
+            var user = await userManager.FindByIdAsync(id.ToString());
+            if (user == null) return NotFound("User not found");
+
+            if (!string.IsNullOrWhiteSpace(updatedUser.UserName))
+                user.UserName = updatedUser.UserName;
+
+            if (!string.IsNullOrWhiteSpace(updatedUser.ProfileImageUrl))
+                user.ProfileImageUrl = updatedUser.ProfileImageUrl;
+
+            var result = await userManager.UpdateAsync(user);
+            if (!result.Succeeded) return BadRequest(result.Errors);
+
+            return Ok("User updated successfully");
+        }
+        [HttpPost("ProfileImage")]
+        public async Task<IActionResult> UpdateProfileImage([FromBody] UserDto dto)
+        {
+            var user = await userManager.FindByIdAsync(dto.Id.ToString());
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            user.ProfileImageUrl = dto.ProfileImageUrl;
+
+            var result = await userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+            {
+                return BadRequest("Failed to update profile image");
+            }
+
+            return Ok(new { message = "Profile image updated", imageUrl = user.ProfileImageUrl });
+        }
+
+        [HttpGet("RedirectToProfileImage")]
+        public async Task<IActionResult> RedirectToProfileImage([FromQuery] string userId)
+        {
+            var user = await userManager.FindByIdAsync(userId);
+            if (user == null || string.IsNullOrEmpty(user.ProfileImageUrl))
+            {
+                return NotFound("User not found or profile image not set");
+            }
+
+            return Redirect(user.ProfileImageUrl);
+        }
+
     }
 }

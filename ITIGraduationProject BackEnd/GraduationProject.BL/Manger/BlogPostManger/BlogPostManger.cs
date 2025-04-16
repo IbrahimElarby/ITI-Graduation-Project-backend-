@@ -320,6 +320,50 @@ namespace ITIGraduationProject.BL
                 };
             }
         }
+        public async Task<GeneralResult> UpdateImageAsync(int postId, string imageUrl)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(imageUrl))
+                {
+                    return new GeneralResult
+                    {
+                        Success = false,
+                        Errors = [new ResultError { Code = "InvalidInput", Message = "Image URL cannot be empty" }]
+                    };
+                }
+
+                var post = await unitOfWork.PostBlogRepository.GetByIdAsync(postId);
+                if (post == null)
+                {
+                    return new GeneralResult
+                    {
+                        Success = false,
+                        Errors = [new ResultError { Code = "PostNotFound", Message = "Blog post not found" }]
+                    };
+                }
+
+                post.FeaturedImageUrl = imageUrl; 
+
+                var saveResult = await unitOfWork.SaveChangesAsync();
+
+                return saveResult > 0
+                    ? new GeneralResult { Success = true }
+                    : new GeneralResult { Success = false, Errors = [new ResultError { Code = "SaveFailed", Message = "No changes persisted" }] };
+            }
+            catch (Exception ex)
+            {
+                return new GeneralResult
+                {
+                    Success = false,
+                    Errors = [new ResultError
+            {
+                Code = "UnexpectedError",
+                Message = $"Unexpected error: {ex.Message}"
+            }]
+                };
+            }
+        }
 
 
     }

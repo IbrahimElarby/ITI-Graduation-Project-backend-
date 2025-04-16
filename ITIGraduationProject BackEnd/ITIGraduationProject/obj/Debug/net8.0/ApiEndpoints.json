@@ -196,6 +196,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ITIGraduationProject.Controllers.BlogPostController",
+    "Method": "RedirectToImage",
+    "RelativePath": "api/BlogPost/post/{id}/image",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ITIGraduationProject.Controllers.CategoryController",
     "Method": "GetALL",
     "RelativePath": "api/Category",

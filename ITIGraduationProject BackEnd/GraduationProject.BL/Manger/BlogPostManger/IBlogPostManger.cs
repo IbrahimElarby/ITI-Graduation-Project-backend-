@@ -12,5 +12,6 @@
         public Task<GeneralResult> AddAsync(BlogPostAddDTO item);
 
         public Task<GeneralResult> DeleteAsync(int id);
+        Task<GeneralResult> UpdateImageAsync(int postId, string imageUrl);
     }
 }
