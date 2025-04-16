@@ -5,6 +5,7 @@ using ITIGraduationProject.BL.DTO.RecipeManger.Output;
 using ITIGraduationProject.BL.DTO.RecipeManger.Read;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using Microsoft.Extensions.Hosting;
 
 namespace ITIGraduationProject.BL.Manger;
 
@@ -63,10 +64,18 @@ public class RecipeManger : IRecipeManger
             foreach (var categoryName in item.CategoryNames)
             {
                 var category = await unitOfWork.CategoryRepository.GetByName(categoryName);
-                if (category != null)
+                if (category == null)
                 {
-                    recipe.Categories.Add(new RecipeCategory { Recipe = recipe, Category = category });
+                    category = new Category { Name = categoryName };
+                    unitOfWork.CategoryRepository.Add(category);
+                    await unitOfWork.SaveChangesAsync(); // Save it to get the CategoryID
                 }
+
+                recipe.Categories.Add(new RecipeCategory
+                {
+                    CategoryID = category.CategoryID,
+                    Category = category
+                });
             }
         }
         if (item.Ingredients != null)
