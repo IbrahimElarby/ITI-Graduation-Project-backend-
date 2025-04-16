@@ -28,7 +28,39 @@ namespace ITIGraduationProject.Controllers
                 return TypedResults.NotFound();
             }
             return TypedResults.Ok(post);
+
         }
+        [HttpGet("post/{id}/image")]
+        public async Task<IActionResult> RedirectToImage(int id)
+        {
+            var post = await blogPostmanger.GetById(id);
+            if (post == null || string.IsNullOrEmpty(post.FeaturedImageUrl))
+            {
+                return NotFound("Post or image not found");
+            }
+
+            return Redirect(post.FeaturedImageUrl);
+        }
+        [HttpPost("post/{id}/image")]
+        public async Task<IActionResult> SaveImageUrl(int id, [FromBody] string imageUrl)
+        {
+            if (string.IsNullOrWhiteSpace(imageUrl))
+            {
+                return BadRequest("Image URL is required.");
+            }
+
+            var post = await blogPostmanger.GetById(id);
+            if (post == null)
+            {
+                return NotFound("Post not found.");
+            }
+
+            post.FeaturedImageUrl = imageUrl;
+            var result = await blogPostmanger.UpdateImageAsync(id, post.FeaturedImageUrl);
+
+            return Ok("Image URL saved successfully.");
+        }
+
         [HttpGet("category/{id}")]
         public async Task<Results<Ok<List<BlogPostDetailsDTO>>, NotFound>> GetByCategory(int id)
         {
@@ -52,7 +84,7 @@ namespace ITIGraduationProject.Controllers
         }
 
         [HttpPut]
-        public async Task<Results<Ok<GeneralResult>, BadRequest<GeneralResult>>> Update (BlogPostUpdateDTO blogpost)
+        public async Task<Results<Ok<GeneralResult>, BadRequest<GeneralResult>>> Update(BlogPostUpdateDTO blogpost)
         {
             {
                 var result = await blogPostmanger.UpdateAsync(blogpost);
