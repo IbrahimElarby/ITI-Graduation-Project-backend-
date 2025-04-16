@@ -21,7 +21,7 @@ namespace ITIGraduationProject
             builder.Services.AddDataAccessServices(builder.Configuration);
             builder.Services.AddBusinessServices();
             builder.Services.Configure<MailSettingsDto>(builder.Configuration.GetSection("MailSettings"));
-            builder.Services.AddIdentityCore<ApplicationUser>(options =>
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>(options =>
             {
                 // Validation to be read from configurations
                 options.Password.RequiredUniqueChars = 2;
@@ -35,13 +35,13 @@ namespace ITIGraduationProject
             })
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
-
+        
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            
+
             // 2. Add CORS
             builder.Services.AddCors(options =>
             {
@@ -94,7 +94,7 @@ namespace ITIGraduationProject
                 options.AddPolicy(
                     Constatnts.Policies.ForDev,
                     builder => builder
-                        .RequireClaim(ClaimTypes.Role, "Developer","PremiumUser")
+                        .RequireClaim(ClaimTypes.Role, "Developer", "PremiumUser")
                         .RequireClaim(ClaimTypes.NameIdentifier)
                 );
                 options.AddPolicy(
