@@ -12,5 +12,7 @@ namespace ITIGraduationProject.BL
         public int RecipeID { get; set; }
         public string RecipeTitle { get; set; }
         public int UserID { get; set; }
+
+        public decimal Rating { get; set; }
     }
 }

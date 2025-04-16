@@ -18,6 +18,8 @@ namespace ITIGraduationProject.DAL
 
         public IFavoriteRecipeRepository FavoriteRecipeRepository { get; }
 
+        public IRatingRepository RatingRepository { get; }
+
         Task<int> SaveChangesAsync();
     }
 }

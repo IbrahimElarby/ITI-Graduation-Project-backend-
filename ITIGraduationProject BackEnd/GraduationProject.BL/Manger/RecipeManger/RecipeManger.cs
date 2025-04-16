@@ -174,6 +174,7 @@ public class RecipeManger : IRecipeManger
             Description = recipe.Description,
             CookingTime = recipe.CookingTime,
             CuisineType = recipe.CuisineType,
+            AvgRating = recipe.AvgRating,
             CreatedAt = recipe.CreatedAt,
             Author = new AuthorNestedDTO
             {
@@ -238,6 +239,7 @@ public class RecipeManger : IRecipeManger
             Protein= recipeNutrition?.Protein?? 0,
             Carbs = recipeNutrition?.Carbohydrates ?? 0,
             Fats = recipeNutrition?.TotalFat ?? 0,
+            
             CuisineType = input.Cuisine,
             CreatedAt = DateTime.UtcNow,
 

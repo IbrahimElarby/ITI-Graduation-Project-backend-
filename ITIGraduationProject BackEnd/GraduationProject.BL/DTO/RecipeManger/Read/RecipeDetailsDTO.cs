@@ -15,6 +15,7 @@ namespace ITIGraduationProject.BL.DTO.RecipeManger.Output
         public string Instructions { get; set; } = string.Empty;
         public int PrepTime { get; set; }
 
+        public decimal AvgRating { get; set; }
         public decimal Calories { get; set; }
         public decimal Protein { get; set; }
         public decimal Carbs { get; set; }

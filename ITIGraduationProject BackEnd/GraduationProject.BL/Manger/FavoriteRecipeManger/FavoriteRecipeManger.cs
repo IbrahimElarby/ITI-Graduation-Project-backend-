@@ -53,7 +53,8 @@ namespace ITIGraduationProject.BL
                 
                 RecipeID = f.RecipeID,
                 RecipeTitle = f.Title ?? "",
-                UserID = f.CreatedBy
+                UserID = f.CreatedBy,
+                Rating = f.AvgRating
             }).ToList();
 
             return new GeneralResult<List<FavoriteRecipeDto>>

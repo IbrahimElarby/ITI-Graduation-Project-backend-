@@ -34,6 +34,7 @@ namespace ITIGraduationProject.BL
             services.AddHttpClient<NutritionService>();
          services.AddScoped<IFavoriteRecipeManger,FavoriteRecipeManager>();
             services.AddScoped<IEMailService, EMailService>();
+            services.AddScoped<IRatingManger, RatingManger>();
 
 
 

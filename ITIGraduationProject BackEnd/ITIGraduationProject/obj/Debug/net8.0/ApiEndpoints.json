@@ -436,14 +436,14 @@
   {
     "ContainingType": "ITIGraduationProject.Controllers.RatingController",
     "Method": "CreateRating",
-    "RelativePath": "api/Rating/ratings",
+    "RelativePath": "api/Rating",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ratingDto",
-        "Type": "ITIGraduationProject.BL.DTO.RatingDto",
+        "Name": "dto",
+        "Type": "ITIGraduationProject.BL.RatingDto",
         "IsRequired": true
       }
     ],
@@ -452,17 +452,27 @@
   {
     "ContainingType": "ITIGraduationProject.Controllers.RatingController",
     "Method": "GetRatingsByRecipe",
-    "RelativePath": "api/Rating/recipes/{id}/ratings",
+    "RelativePath": "api/Rating/recipe/{recipeId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "recipeId",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ITIGraduationProject.Controllers.RatingController",
+    "Method": "GetTopRatedRecipes",
+    "RelativePath": "api/Rating/top",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
