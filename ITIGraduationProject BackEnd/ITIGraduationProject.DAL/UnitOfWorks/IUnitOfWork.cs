@@ -20,6 +20,8 @@ namespace ITIGraduationProject.DAL
 
         public IRatingRepository RatingRepository { get; }
 
+        public ICommentRepository CommentRepository { get; }
+
         Task<int> SaveChangesAsync();
     }
 }

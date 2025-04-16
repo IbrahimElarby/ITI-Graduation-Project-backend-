@@ -27,6 +27,7 @@ namespace ITIGraduationProject.DAL
             services.AddScoped<IRecipeCategoryRepository, RecipeCategoryRepository>();
             services.AddScoped<IFavoriteRecipeRepository, FavoriteRecipeRepository>();
             services.AddScoped<IRatingRepository, RatingRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
           
         }
