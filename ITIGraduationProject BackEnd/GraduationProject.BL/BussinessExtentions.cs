@@ -5,6 +5,7 @@ using ITIGraduationProject.BL.Manger;
 using ITIGraduationProject.BL.Manger.CategoryManger;
 using ITIGraduationProject.BL.Manger.MailServiceManger;
 using ITIGraduationProject.BL.Manger.SubscriptionManger;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,7 @@ namespace ITIGraduationProject.BL
             services.AddScoped<IEMailService, EMailService>();
             services.AddScoped<IRatingManger, RatingManger>();
             services.AddScoped<ICommentManger, CommentManger>();
+          
 
 
 
