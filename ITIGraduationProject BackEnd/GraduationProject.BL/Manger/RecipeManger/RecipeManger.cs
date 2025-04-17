@@ -56,7 +56,9 @@ public class RecipeManger : IRecipeManger
             Creator = author,
             CreatedBy = author.Id,
             Categories = new List<RecipeCategory>(),
-            RecipeIngredients = new List<RecipeIngredient>()
+            RecipeIngredients = new List<RecipeIngredient>(),
+            Image = item.Image
+            
         };
 
         if (item.CategoryNames != null)
@@ -174,6 +176,7 @@ public class RecipeManger : IRecipeManger
         {
             RecipeID = recipe.RecipeID,
             Title = recipe.Title,
+            Image = recipe.Image,
             Instructions = recipe.Instructions,
             PrepTime = recipe.PrepTime,
             Calories = recipe.Calories,
