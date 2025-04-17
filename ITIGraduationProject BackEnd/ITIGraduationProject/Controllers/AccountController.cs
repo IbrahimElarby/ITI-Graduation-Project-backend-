@@ -23,16 +23,17 @@ namespace ITIGraduationProject.Controllers
             userManager = _userManager;
         }
         [HttpPost("assign-role")]
-        public async Task<Results<Ok<string>, NotFound<string>>> AssignRole(string userName, string role)
+        public async Task<Results<Ok<string>, NotFound<string>, BadRequest<string>>> AssignRole(string userName, string role)
         {
             var user = await userManager.FindByNameAsync(userName);
             if (user == null)
                 return TypedResults.NotFound("User not found");
 
-            var claim = new Claim(ClaimTypes.Role, role);
-            await userManager.AddClaimAsync(user, claim);
+            var result = await userManager.AddToRoleAsync(user, role);
+            if (!result.Succeeded)
+                return TypedResults.BadRequest("Failed to assign role");
 
-            return TypedResults.Ok($"Role '{role}' added to user '{userName}'");
+            return TypedResults.Ok($"Role '{role}' assigned to user '{userName}'");
         }
 
         [HttpPost("Register")]

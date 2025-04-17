@@ -1,4 +1,4 @@
-using BugProject;
+﻿using BugProject;
 using ITIGraduationProject.BL;
 using ITIGraduationProject.BL.DTO;
 using ITIGraduationProject.BL.Manger.SubscriptionManger;
@@ -13,7 +13,7 @@ namespace ITIGraduationProject
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static  async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -107,6 +107,12 @@ namespace ITIGraduationProject
             });
 
             var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                await Constatnts.SeedRolesAsync(services); // 👈 Seed roles here
+            }
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
