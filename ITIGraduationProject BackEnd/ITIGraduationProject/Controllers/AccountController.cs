@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using ITIGraduationProject.BL.DTO.Account;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ITIGraduationProject.Controllers
 {
@@ -105,8 +106,15 @@ namespace ITIGraduationProject.Controllers
             return Ok("Password reset successfully");
         }
         [HttpPut("update-profile/{id}")]
-        public async Task<IActionResult> UpdateProfile(int id, [FromBody] UserDto updatedUser)
+        [Authorize]
+        public async Task<IActionResult> UpdateProfile(int id, [FromBody] UserProfileUpdateDto updatedUser)
         {
+            var userIdFromToken = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userIdFromToken == null || userIdFromToken != id.ToString())
+            {
+                return Forbid("You are not allowed to update this profile.");
+            }
+
             var user = await userManager.FindByIdAsync(id.ToString());
             if (user == null) return NotFound("User not found");
 
@@ -116,13 +124,32 @@ namespace ITIGraduationProject.Controllers
             if (!string.IsNullOrWhiteSpace(updatedUser.ProfileImageUrl))
                 user.ProfileImageUrl = updatedUser.ProfileImageUrl;
 
-            var result = await userManager.UpdateAsync(user);
+            IdentityResult result;
+
+            if (!string.IsNullOrWhiteSpace(updatedUser.NewPassword))
+            {
+                if (string.IsNullOrWhiteSpace(updatedUser.CurrentPassword))
+                {
+                    return BadRequest("Current password is required to change the password.");
+                }
+
+                var passwordCheck = await userManager.CheckPasswordAsync(user, updatedUser.CurrentPassword);
+                if (!passwordCheck)
+                {
+                    return BadRequest("Current password is incorrect.");
+                }
+
+                result = await userManager.ChangePasswordAsync(user, updatedUser.CurrentPassword, updatedUser.NewPassword);
+                if (!result.Succeeded) return BadRequest(result.Errors);
+            }
+            result = await userManager.UpdateAsync(user);
             if (!result.Succeeded) return BadRequest(result.Errors);
 
             return Ok("User updated successfully");
         }
+
         [HttpPost("ProfileImage")]
-        public async Task<IActionResult> UpdateProfileImage([FromBody] UserDto dto)
+        public async Task<IActionResult> UpdateProfileImage([FromBody] ImageUpdateDto dto)
         {
             var user = await userManager.FindByIdAsync(dto.Id.ToString());
             if (user == null)
