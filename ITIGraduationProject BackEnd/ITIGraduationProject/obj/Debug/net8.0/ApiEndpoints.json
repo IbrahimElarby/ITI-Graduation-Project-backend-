@@ -67,7 +67,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "ITIGraduationProject.BL.DTO.Account.UserDto",
+        "Type": "ITIGraduationProject.BL.DTO.Account.ImageUpdateDto",
         "IsRequired": true
       }
     ],
@@ -152,7 +152,7 @@
       },
       {
         "Name": "updatedUser",
-        "Type": "ITIGraduationProject.BL.DTO.Account.UserDto",
+        "Type": "ITIGraduationProject.BL.DTO.Account.UserProfileUpdateDto",
         "IsRequired": true
       }
     ],
