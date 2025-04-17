@@ -25,6 +25,8 @@ namespace ITIGraduationProject.BL.DTO.RecipeManger.Output
         public string CuisineType { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
 
+        public string Image {  get; set; }
+
 
         public AuthorNestedDTO Author { get; set; } = new();
         public string CreatorName { get; set; }

@@ -72,6 +72,7 @@ namespace ITIGraduationProject.BL
                 Calories = r.Calories,
                 Protein = r.Protein,
                 Carbs = r.Carbs,
+                Image = r.Image,
                 Fats = r.Fats,
                 CuisineType = r.CuisineType ?? "",
                 AvgRating = r.AvgRating,

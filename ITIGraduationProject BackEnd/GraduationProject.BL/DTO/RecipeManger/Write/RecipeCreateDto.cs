@@ -15,7 +15,7 @@ namespace ITIGraduationProject.BL.DTO.RecipeManger.Input
         public int CookingTime { get; set; }
         public string CuisineType { get; set; }
 
-
+        public string Image {  get; set; }
         public AuthorNestedDTO Author { get; set; }
 
         //public int CreatedBy { get; set; }

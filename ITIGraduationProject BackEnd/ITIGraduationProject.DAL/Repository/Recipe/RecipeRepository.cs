@@ -47,6 +47,7 @@ namespace ITIGraduationProject.DAL.Repository
         {
             return await cookingContext.Set<Recipe>()
                  .Include(r => r.Creator)
+                 
                  .Include(r => r.RecipeIngredients)
                  .ThenInclude(ri => ri.Ingredient)
                  .Include(r => r.Ratings)

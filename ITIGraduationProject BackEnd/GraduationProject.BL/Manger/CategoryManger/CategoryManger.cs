@@ -69,7 +69,7 @@ namespace ITIGraduationProject.BL.Manger.CategoryManger
                     Ingredients = rc.Recipe?.RecipeIngredients?.Select(i => new RecipeIngredientDto
                     {
                         IngredientID = i.IngredientID,
-                        IngredientName = i.Ingredient.Name,
+                        IngredientName = i?.Ingredient?.Name,
                         CaloriesPer100g = i.Ingredient.CaloriesPer100g,
                         Protein = i.Ingredient.Protein,
                         Quantity = i.Quantity,
