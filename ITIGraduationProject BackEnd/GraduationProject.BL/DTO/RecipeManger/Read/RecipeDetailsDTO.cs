@@ -32,7 +32,7 @@ namespace ITIGraduationProject.BL.DTO.RecipeManger.Output
         public List<RecipeIngredientDto> Ingredients { get; set; }
 
         public List<RatingDTO> Ratings { get; set; } = new();
-        public List<CommentNestedDTO> Comments { get; set; } = new();
+        public List<CommentDto> Comments { get; set; } = new();
         public List<string> CategoryNames { get; set; } = new();
 
         public decimal TotalCalories

@@ -16,5 +16,7 @@ namespace ITIGraduationProject.BL
         public string UserName { get; set; }
 
         public string UserImg { get; set; }
+
+        public DateTime CreatedAt { get; set; }
     }
 }

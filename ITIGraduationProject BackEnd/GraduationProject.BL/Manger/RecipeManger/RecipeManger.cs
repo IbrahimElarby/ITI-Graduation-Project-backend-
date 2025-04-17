@@ -205,14 +205,17 @@ public class RecipeManger : IRecipeManger
                 
             }).ToList() ?? new List<RatingDTO>(),
 
-            Comments = recipe.Comments?.Select(c => new CommentNestedDTO
+            Comments = recipe.Comments?.Select(c => new CommentDto
             {
-                CommentID = c.CommentID,
+                UserName = c.User?.UserName,
+                UserImg = c.User?.ProfileImageUrl,
+                RecipeId = (int)c.RecipeID,
+                UserId = c.UserID,
                 Content = c.Text,
                 CreatedAt = c.CreatedAt,
                 
                 
-            }).ToList() ?? new List<CommentNestedDTO>(),
+            }).ToList() ?? new List<CommentDto>(),
 
             CategoryNames = recipe.Categories?.Select(rc => rc.Category?.Name).ToList() ?? new List<string>()
         };

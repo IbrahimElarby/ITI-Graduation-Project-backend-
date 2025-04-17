@@ -55,7 +55,8 @@ namespace ITIGraduationProject.BL
                     RecipeId = c.RecipeID ?? 0,
                     UserId = c.UserID,
                     UserName = user?.UserName ?? "Unknown",
-                    UserImg = user?.ProfileImageUrl ?? "no image"  // Replace `ImageUrl` with the actual property name
+                    UserImg = user?.ProfileImageUrl ?? "no image",
+                    CreatedAt = c.CreatedAt
                 };
             });
 
