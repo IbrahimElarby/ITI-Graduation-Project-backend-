@@ -42,6 +42,24 @@ namespace ITIGraduationProject.DAL.Repository
                 .ToListAsync();
         }
 
+
+        public async override Task<Recipe?> GetByIdAsync(int id)
+        {
+            return await cookingContext.Set<Recipe>()
+                 .Include(r => r.Creator)
+                 .Include(r => r.RecipeIngredients)
+                 .ThenInclude(ri => ri.Ingredient)
+                 .Include(r => r.Ratings)
+                 .Include(r => r.Comments)
+                 
+                 .Include(r => r.Categories)
+                     .ThenInclude(rc => rc.Category)
+
+              
+                 .AsSplitQuery()
+                 .FirstOrDefaultAsync(r=> r.RecipeID == id);
+        }
+
         public  async Task<List<Recipe>> GetByTitle(string title)
         {
             return await cookingContext.Recipes
