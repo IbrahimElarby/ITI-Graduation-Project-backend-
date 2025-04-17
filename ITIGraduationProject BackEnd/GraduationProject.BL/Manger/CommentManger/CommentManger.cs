@@ -12,7 +12,7 @@ namespace ITIGraduationProject.BL
         
         private readonly IUnitOfWork _unitOfWork;
 
-        public CommentManger( IUnitOfWork unitOfWork)
+        public CommentManger( IUnitOfWork unitOfWork )
         {
             
             _unitOfWork = unitOfWork;
@@ -20,11 +20,18 @@ namespace ITIGraduationProject.BL
 
         public async Task<GeneralResult> AddCommentAsync(CommentDto dto)
         {
+
+            var user = await _unitOfWork.AccountRepository.GetUserByIdAsync(dto.UserId.ToString());
+            if (user == null)
+            {
+                return new GeneralResult { Success = false, Errors =[ new ResultError { Code = "userNotFound", Message = "Account Not Found" } ]};
+            }
             var comment = new Comment
             {
                 Text = dto.Content,
                 RecipeID = dto.RecipeId,
                 UserID = dto.UserId,
+               
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -38,19 +45,29 @@ namespace ITIGraduationProject.BL
         {
             var comments = await _unitOfWork.CommentRepository.GetByRecipeIdAsync(recipeId);
 
-            var commentDtos = comments.Select(c => new CommentDto
+            var commentDtoTasks = comments.Select(async c =>
             {
-                Content = c.Text ?? string.Empty,
-                RecipeId = c.RecipeID ?? 0,
-                UserId = c.UserID
-            }).ToList();
+                var user = await _unitOfWork.AccountRepository.GetUserByIdAsync(c.UserID.ToString());
+
+                return new CommentDto
+                {
+                    Content = c.Text ?? string.Empty,
+                    RecipeId = c.RecipeID ?? 0,
+                    UserId = c.UserID,
+                    UserName = user?.UserName ?? "Unknown",
+                    UserImg = user?.ProfileImageUrl ?? "no image"  // Replace `ImageUrl` with the actual property name
+                };
+            });
+
+            var commentDtos = await Task.WhenAll(commentDtoTasks);
 
             return new GeneralResult<List<CommentDto>>
             {
                 Success = true,
-                Data = commentDtos
+                Data = commentDtos.ToList()
             };
         }
+
 
         public async Task<GeneralResult> UpdateCommentAsync(int commentId, string newText, int userId)
         {

@@ -1,6 +1,6 @@
 ﻿
 using ITIGraduationProject.DAL.Repository;
-
+using ITIGraduationProject.DAL.Repository.Account;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +27,8 @@ namespace ITIGraduationProject.DAL
 
         public IFavoriteRecipeRepository FavoriteRecipeRepository { get; }
 
+        public IAccountRepository AccountRepository { get; }
+
         public IRatingRepository RatingRepository { get; }
 
         public ICommentRepository CommentRepository { get; }
@@ -40,7 +42,8 @@ namespace ITIGraduationProject.DAL
             IRecipeCategoryRepository _RecipeCategoryRepository,
             IFavoriteRecipeRepository _FavoriteRecipeRepository,
             IRatingRepository ratingRepository ,
-            ICommentRepository commentRepository
+            ICommentRepository commentRepository,
+            IAccountRepository accountRepository
 
             )
         {
@@ -54,6 +57,7 @@ namespace ITIGraduationProject.DAL
             FavoriteRecipeRepository = _FavoriteRecipeRepository;
             RatingRepository = ratingRepository;
             CommentRepository = commentRepository;
+            AccountRepository = accountRepository;
         }
 
 

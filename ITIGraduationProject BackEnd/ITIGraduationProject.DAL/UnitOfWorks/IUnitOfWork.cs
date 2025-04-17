@@ -1,6 +1,7 @@
 ﻿
 
 using ITIGraduationProject.DAL.Repository;
+using ITIGraduationProject.DAL.Repository.Account;
 
 
 namespace ITIGraduationProject.DAL
@@ -21,6 +22,7 @@ namespace ITIGraduationProject.DAL
         public IRatingRepository RatingRepository { get; }
 
         public ICommentRepository CommentRepository { get; }
+        public IAccountRepository AccountRepository { get; }
 
         Task<int> SaveChangesAsync();
     }
