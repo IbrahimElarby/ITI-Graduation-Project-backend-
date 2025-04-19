@@ -1,4 +1,5 @@
-﻿using BugProject;
+﻿using AspNetCoreRateLimit;
+using BugProject;
 using ITIGraduationProject.BL;
 using ITIGraduationProject.BL.DTO;
 using ITIGraduationProject.BL.Manger.SubscriptionManger;
@@ -105,6 +106,36 @@ namespace ITIGraduationProject
               );
 
             });
+
+            // From here to Handle number of requsets per minute
+
+
+            // Add MemoryCache (مطلوب للمكتبة)
+            builder.Services.AddMemoryCache();
+
+            // إعداد قواعد الـ Rate Limiting
+            builder.Services.Configure<IpRateLimitOptions>(options =>
+            {
+                options.GeneralRules = new List<RateLimitRule>
+    {
+        new RateLimitRule
+        {
+            Endpoint = "*",     // كل المسارات
+            Limit = 50,          // عدد الريكوستات المسموح بها
+            Period = "1m"       // خلال دقيقة واحدة
+        }
+    };
+            });
+
+            // إضافة باقي الخدمات المطلوبة من المكتبة
+            builder.Services.AddInMemoryRateLimiting();
+            builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            // باقي الخدمات بتاعتك
+            builder.Services.AddControllers();
+
+            // End here
 
             var app = builder.Build();
 

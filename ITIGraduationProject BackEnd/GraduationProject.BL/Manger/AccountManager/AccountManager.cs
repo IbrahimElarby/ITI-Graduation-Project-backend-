@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using ITIGraduationProject.BL.Manger.MailServiceManger;
+using ITIGraduationProject.BL.DTO.Account;
 
 namespace ITIGraduationProject.BL.Manger
 {
@@ -128,6 +129,18 @@ namespace ITIGraduationProject.BL.Manger
             }
 
             return null;
+        }
+        public async Task<getUserDto?> GetBasicUserInfoByIdAsync(string userId)
+        {
+            var user = await _accountRepository.GetUserByIdAsync(userId);
+            if (user == null) return null;
+
+            return new getUserDto
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                ProfileImageUrl = user.ProfileImageUrl
+            };
         }
     }
 }

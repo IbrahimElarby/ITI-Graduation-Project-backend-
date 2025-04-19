@@ -89,6 +89,7 @@ public class RecipeManger : IRecipeManger
                 {
                     recipe.RecipeIngredients.Add(new RecipeIngredient
                     {
+                        
                         Recipe = recipe,
                         Ingredient = ingredient,
                         Quantity = ingredientDto.Quantity,

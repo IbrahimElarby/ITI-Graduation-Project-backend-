@@ -69,6 +69,7 @@ namespace ITIGraduationProject.DAL.Repository
                  .ThenInclude(ri => ri.Ingredient)
                 .Include(r => r.Ratings)
                 .Include(r => r.Comments)
+                
                 .Include(r => r.Categories)
                     .ThenInclude(rc => rc.Category)
                 .AsNoTracking()
