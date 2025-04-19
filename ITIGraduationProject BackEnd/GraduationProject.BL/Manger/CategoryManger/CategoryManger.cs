@@ -95,8 +95,17 @@ namespace ITIGraduationProject.BL.Manger.CategoryManger
             return result;
         }
 
-
-        public async Task<CategoryDetailsDTO?> GetById(int id)
+        public async Task<List<CategoryAlldto>> getall2()
+        {
+            var categoriesFromDb = await unitOfWork.CategoryRepository.GetAll();
+            var result = categoriesFromDb.Select(c => new CategoryAlldto
+            {
+                id = c.CategoryID,
+                name = c.Name,
+            }).ToList();
+            return result;
+            }
+         public async Task<CategoryDetailsDTO?> GetById(int id)
         {
             var categoryFromDb = await unitOfWork.CategoryRepository.GetByIdAsync(id);
             if (categoryFromDb == null)

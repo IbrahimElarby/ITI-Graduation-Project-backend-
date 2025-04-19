@@ -21,6 +21,12 @@ namespace ITIGraduationProject.Controllers
         {
             return TypedResults.Ok(await categoryManger.GetAll());
         }
+
+        [HttpGet("ALL")]
+        public async Task<Ok<List<CategoryAlldto>>> GetALL2()
+        {
+            return TypedResults.Ok(await categoryManger.getall2());
+        }
         [HttpGet("{id}")]
         public async Task<Results<Ok<CategoryDetailsDTO>, NotFound>> GetById(int id)
         {

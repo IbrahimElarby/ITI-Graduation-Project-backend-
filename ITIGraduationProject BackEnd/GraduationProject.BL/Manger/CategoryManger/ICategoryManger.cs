@@ -13,6 +13,7 @@ namespace ITIGraduationProject.BL.Manger.CategoryManger
 
         public Task<GeneralResult> AddAsync(CategoryAddDTO item);
 
+        public  Task<List<CategoryAlldto>> getall2();
         public Task<GeneralResult> DeleteAsync(int id);
     }
 }

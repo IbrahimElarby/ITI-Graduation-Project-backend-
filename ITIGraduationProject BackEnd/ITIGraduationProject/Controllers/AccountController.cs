@@ -107,14 +107,14 @@ namespace ITIGraduationProject.Controllers
             return Ok("Password reset successfully");
         }
         [HttpPut("update-profile/{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> UpdateProfile(int id, [FromBody] UserProfileUpdateDto updatedUser)
         {
-            var userIdFromToken = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (userIdFromToken == null || userIdFromToken != id.ToString())
-            {
-                return Forbid("You are not allowed to update this profile.");
-            }
+            //var userIdFromToken = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            //if (userIdFromToken == null || userIdFromToken != id.ToString())
+            //{
+            //    return Forbid("You are not allowed to update this profile.");
+            //}
 
             var user = await userManager.FindByIdAsync(id.ToString());
             if (user == null) return NotFound("User not found");
@@ -127,22 +127,7 @@ namespace ITIGraduationProject.Controllers
 
             IdentityResult result;
 
-            if (!string.IsNullOrWhiteSpace(updatedUser.NewPassword))
-            {
-                if (string.IsNullOrWhiteSpace(updatedUser.CurrentPassword))
-                {
-                    return BadRequest("Current password is required to change the password.");
-                }
-
-                var passwordCheck = await userManager.CheckPasswordAsync(user, updatedUser.CurrentPassword);
-                if (!passwordCheck)
-                {
-                    return BadRequest("Current password is incorrect.");
-                }
-
-                result = await userManager.ChangePasswordAsync(user, updatedUser.CurrentPassword, updatedUser.NewPassword);
-                if (!result.Succeeded) return BadRequest(result.Errors);
-            }
+            
             result = await userManager.UpdateAsync(user);
             if (!result.Succeeded) return BadRequest(result.Errors);
 
@@ -180,6 +165,14 @@ namespace ITIGraduationProject.Controllers
             }
 
             return Redirect(user.ProfileImageUrl);
+        }
+        [HttpGet("getuser/{userId}")]
+        public async Task<IActionResult> GetBasicInfo(string userId)
+        {
+            var userDto = await _accountManager.GetBasicUserInfoByIdAsync(userId);
+            if (userDto == null) return NotFound();
+
+            return Ok(userDto);
         }
 
 

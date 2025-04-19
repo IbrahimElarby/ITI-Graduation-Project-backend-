@@ -29,7 +29,7 @@ namespace ITIGraduationProject.BL
             return ingredients.Select(i => new RecipeIngredientDTO
             {
                 IngredientID = i.IngredientID,
-                Name = i.Name,
+                ingredientName = i.Name,
                 CaloriesPer100g = i.CaloriesPer100g,
                 Carbs   = i.Carbs,
                 Fats = i.Fats,
@@ -47,7 +47,7 @@ namespace ITIGraduationProject.BL
             return new RecipeIngredientDTO
             {
                 IngredientID = ingredient.IngredientID,
-                Name = ingredient.Name,
+                ingredientName = ingredient.Name,
                 CaloriesPer100g = ingredient.CaloriesPer100g,
                 Carbs = ingredient.Carbs,
                 Fats = ingredient.Fats,
@@ -73,7 +73,7 @@ namespace ITIGraduationProject.BL
                     Carbs = item.Carbs,
                     Fats = item.Fats,
                     Protein = item.Protein,
-                    Name = item.Name,
+                    Name = item.ingredientName,
                 };
                 unitOfWork.IngredientRepository.Add(ingrdient);
                 var saveResult = await unitOfWork.SaveChangesAsync();
@@ -179,7 +179,7 @@ namespace ITIGraduationProject.BL
                     Errors = [new ResultError { Code = "IngridentNotFound", Message = "Ingridient not found" }]
                 };
             }
-            ingredient.Name = item.Name;
+            ingredient.Name = item.ingredientName;
             ingredient.Carbs = item.Carbs;
             ingredient.CaloriesPer100g = item.CaloriesPer100g;
             ingredient.Fats = item.Fats;
