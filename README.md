@@ -2,6 +2,9 @@
 
 This is the backend API for our full-stack ITI Graduation Project. It supports user authentication, recipe management, blog posts, comments, categories, and admin operations.
 
+check it out 
+https://iti-graduation-project-frontend.vercel.app/home
+
 ---
 
 ## 🚀 Technologies Used
